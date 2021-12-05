@@ -1,0 +1,9 @@
+It took 50.0901358000001 seconds to scrap pages | THREADS: 1
+It took 27.34038670000018 seconds to scrap pages | THREADS: 2
+It took 12.922329999999874 seconds to scrap pages | THREADS: 4
+It took 10.469215799999802 seconds to scrap pages | THREADS: 8
+It took 10.580185599999822 seconds to scrap pages | THREADS: 12
+It took 10.822862500000156 seconds to scrap pages | THREADS: 16
+It took 10.987059800000225 seconds to scrap pages | THREADS: 32
+It took 11.524841599999945 seconds to scrap pages | THREADS: 64
+It took 11.372879000000012 seconds to scrap pages | THREADS: 128
