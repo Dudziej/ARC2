@@ -1,7 +1,7 @@
 import concurrent
 import concurrent.futures
 
-from scrapper3 import UrlGenerator, ProductsIDsScrapper, URL_BASE,  timer, ProductScrapper, get_products
+from scrapper import UrlGenerator, ProductsIDsScrapper, URL_BASE,  timer, ProductScrapper, get_products
 
 
 def get_pages_performance():
