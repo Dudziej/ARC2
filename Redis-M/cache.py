@@ -1,37 +1,25 @@
-from rejson import Client, Path
+import json
+import redis
+from datetime import datetime
 
-rj = Client(host='localhost', port=6379, decode_responses=True)
+r = redis.StrictRedis(host='localhost', port=6379, db=0)
 
-#podłączyć JSON
-obj = {
-    'answer': 42,
-    'arr': [None, True, 3.14],
-    'truth': {
-        'coord': 'out there'
-    }
-}
-rj.jsonset('obj', Path.rootPath(), obj)
+with open('../Scrapper/data.json') as json_file:
+    data = json.load(json_file)
+    for obj in data:
+        jako_string = json.dumps(obj)
+        r.set(obj['id'], jako_string)
 
-print
-'Is there anybody... {}?'.format(
-    rj.jsonget('obj', Path('.truth.coord'))
-)
+for key in r.keys():
+    time_start = datetime.utcnow()
+    obj = r.get(key)
+    time_stop = datetime.utcnow()
+    print('%.15f' % (time_stop - time_start).microseconds)
+    print(json.loads(obj.decode('utf-8')))
 
-rj.jsondel('obj', Path('.arr[0]'))
-rj.jsonarrappend('obj', Path('.arr'), 'something')
-print
-'{} popped!'.format(rj.jsonarrpop('obj', Path('.arr')))
 
-rj.jsonset('obj', Path('.answer'), 2.17)
+time_start = datetime.utcnow()
+print(json.loads(r.get('43437460').decode('utf-8')))
+time_stop = datetime.utcnow()
+print('%.15f' % (time_stop - time_start).microseconds)
 
-jp = rj.pipeline()
-jp.set('foo', 'bar')
-jp.jsonset('baz', Path.rootPath(), 'qaz')
-jp.execute()
-
-obj_non_ascii = {
-    'non_ascii_string': 'hyvää'
-}
-rj.jsonset('non-ascii', Path.rootPath(), obj_non_ascii)
-print
-'{} is a non-ascii string'.format(rj.jsonget('non-ascii', Path('.non_ascii_string'), no_escape=True))
