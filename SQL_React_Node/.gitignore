@@ -1,6 +1,5 @@
 # dependencies
 node_modules/
-src/server/config
 
 # production bundles
 dist/
