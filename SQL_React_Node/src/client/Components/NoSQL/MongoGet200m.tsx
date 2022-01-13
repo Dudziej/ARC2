@@ -1,18 +1,18 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
 
-const GetAll = (props: AppProps) => {
+const MongoGet200m = (props: AppProps) => {
 
-    const [allData, setAllData] = useState([]);
+    const [allWodoszczelne, setAllWodoszczelne] = useState([]);
     const [exTime, setExTime] = useState(0);
 
-    async function getData() {
+    async function getAnalogowe() {
         try {
             let start = Date.now();
-            const res = await fetch('/api/allData');
+            const res = await fetch('/mongo/getWodoszczelne200m');
             const data = await res.json();
             let end = Date.now();
-            setAllData(data);
+            setAllWodoszczelne(data);
             setExTime(end - start)
         } catch (error) {
             console.log(error);
@@ -20,7 +20,7 @@ const GetAll = (props: AppProps) => {
     }
 
     function hideAndShow() {
-        var x = document.getElementById("allResults");
+        var x = document.getElementById("allAnalogowe");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -29,17 +29,17 @@ const GetAll = (props: AppProps) => {
     }
 
     return (
-        <div className='getAll'>
-            <button className="btn btn-primary" onClick={getData}>
+        <div className='getAnalogoweAll'>
+            <button className="btn btn-primary" onClick={getAnalogowe}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
-            <p>Pobrane obiekty: {allData.length}</p>
+            <p>Pobrane obiekty: {allWodoszczelne.length}</p>
             <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
-            <div id='allResults' style={{display:'none'}}>
+            <div id='allAnalogowe' style={{display:'none'}}>
                 <ul className='list-group'>
-                    {allData.map((data, idx) => {
-                        return <li key={idx} className='list-group-item'>{data.id}</li>
+                    {allWodoszczelne.map((data, idx) => {
+                        return <li key={idx} className='list-group-item'>{data.id} {data.Rodzaj}</li>
                     })}
                 </ul>
             </div>
@@ -51,4 +51,4 @@ const GetAll = (props: AppProps) => {
 interface AppProps {
 }
 
-export default GetAll;
+export default MongoGet200m;

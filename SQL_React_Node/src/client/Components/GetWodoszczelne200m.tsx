@@ -30,12 +30,12 @@ const GetWodoszczelne200mAll = (props: AppProps) => {
 
     return (
         <div className='getAllWodoszczelne200m'>
-            <button onClick={getWodoszczelne200m}>
+            <button className="btn btn-primary" onClick={getWodoszczelne200m}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allWodoszczelne200m.length}</p>
-            <button onClick={hideAndShow}>Pokaż wyniki</button>
+            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
             <div id='allWodoszczelne200m' style={{display:'none'}}>
                 <ul className='list-group'>
                     {allWodoszczelne200m.map((data, idx) => {

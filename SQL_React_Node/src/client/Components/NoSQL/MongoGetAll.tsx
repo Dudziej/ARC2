@@ -30,12 +30,12 @@ const MongoGetAll = (props: AppProps) => {
 
     return (
         <div className='getAll'>
-        <button onClick={getData}>
+        <button className="btn btn-primary" onClick={getData}>
             Pobierz wszystko
     </button>
     <p>Czas wykonania : {exTime} Millisekund</p>
     <p>Pobrane obiekty: {allData.length}</p>
-    <button onClick={hideAndShow}>Pokaż wyniki</button>
+    <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
     <div id='allResults' style={{display:'none'}}>
     <ul className='list-group'>
         {allData.map((data, idx) => {

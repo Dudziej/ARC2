@@ -30,12 +30,12 @@ const MongoGetAnalogowe = (props: AppProps) => {
 
     return (
         <div className='getAnalogoweAll'>
-            <button onClick={getAnalogowe}>
+            <button className="btn btn-primary" onClick={getAnalogowe}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allAnalogowe.length}</p>
-            <button onClick={hideAndShow}>Pokaż wyniki</button>
+            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
             <div id='allAnalogowe' style={{display:'none'}}>
                 <ul className='list-group'>
                     {allAnalogowe.map((data, idx) => {
