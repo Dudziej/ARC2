@@ -60,7 +60,7 @@ app.get('/mongo/getLorus', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {Producent: 'Lorus Zegarki Lorus'}
+        var query = {Producent: 'Lorus > Zegarki Lorus'}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
