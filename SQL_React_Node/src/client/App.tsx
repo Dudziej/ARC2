@@ -9,6 +9,7 @@ import IdParzyste from "./Components/IdParzyste";
 import MongoGetAll from "./Components/NoSQL/MongoGetAll";
 import MongoGetAnalogowe from "./Components/NoSQL/MongoGetAnalogowe";
 import MongoGet200m from "./Components/NoSQL/MongoGet200m";
+import MongoGetProducentLorus from "./Components/NoSQL/MongoGetLorus";
 
 const App = (props: AppProps) => {
 
@@ -54,6 +55,11 @@ const App = (props: AppProps) => {
 				<div className='col-sm-5 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SELECT * from data WHERE Producent = 'Lorus  Zegarki Lorus'</p>
 					<GetProducentLorus/>
+				</div>
+
+				<div className='col-sm-5 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
+					<p>find(Producent: 'Lorus Zegarki Lorus')</p>
+					<MongoGetProducentLorus/>
 				</div>
 
 				<div className='col-sm-5 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>

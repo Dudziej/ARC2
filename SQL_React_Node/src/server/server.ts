@@ -56,5 +56,17 @@ app.get('/mongo/getWodoszczelne200m', function (req, res) {
     })
 })
 
+app.get('/mongo/getLorus', function (req, res) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
+        var query = {Producent: 'Lorus Zegarki Lorus'}
+        db.collection('arc').find(query).limit(1).toArray(function (err, result) {
+            if (err) throw err
+            res.send(JSON.stringify(result))
+        })
+    })
+})
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server listening on port: ${port}`));
