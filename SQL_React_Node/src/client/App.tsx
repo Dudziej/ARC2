@@ -10,6 +10,7 @@ import MongoGetAll from "./Components/NoSQL/MongoGetAll";
 import MongoGetAnalogowe from "./Components/NoSQL/MongoGetAnalogowe";
 import MongoGet200m from "./Components/NoSQL/MongoGet200m";
 import MongoGetProducentLorus from "./Components/NoSQL/MongoGetLorus";
+import MongoGetWzor from "./Components/NoSQL/MongoGetWzor";
 
 const App = (props: AppProps) => {
 
@@ -65,6 +66,11 @@ const App = (props: AppProps) => {
 				<div className='col-sm-5 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SELECT * from data WHERE LENGTH(Wzór)  0</p>
 					<GetKrajProducentaIstnieje/>
+				</div>
+
+				<div className='col-sm-5 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
+					<p>find(Wzór: $exists: true)</p>
+					<MongoGetWzor/>
 				</div>
 
 				<div className='col-sm-5 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
