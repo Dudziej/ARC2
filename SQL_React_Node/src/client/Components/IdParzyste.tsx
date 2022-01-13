@@ -30,12 +30,12 @@ const IdParzyste = (props: AppProps) => {
 
     return (
         <div className='getAll'>
-            <button onClick={getData}>
+            <button className="btn btn-primary" onClick={getData}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allIdParzyste.length}</p>
-            <button onClick={hideAndShow}>Pokaż wyniki</button>
+            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
             <div id='allIdParzyste' style={{display:'none'}}>
                 <ul className='list-group'>
                     {allIdParzyste.map((data, idx) => {

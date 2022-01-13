@@ -30,12 +30,12 @@ const GetProducentLorus = (props: AppProps) => {
 
     return (
         <div className='getAllProducentLorus'>
-            <button onClick={getWodoszczelne200m}>
+            <button className="btn btn-primary" onClick={getWodoszczelne200m}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allProducentLorus.length}</p>
-            <button onClick={hideAndShow}>Pokaż wyniki</button>
+            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
             <div id='allProducentLorus' style={{display:'none'}}>
                 <ul className='list-group'>
                     {allProducentLorus.map((data, idx) => {

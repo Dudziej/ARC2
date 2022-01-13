@@ -51,17 +51,17 @@ const App = (props: AppProps) => {
 					<MongoGet200m/>
 				</div>
 
-				<div className='col-sm-10 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
+				<div className='col-sm-5 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SELECT * from data WHERE Producent = 'Lorus  Zegarki Lorus'</p>
 					<GetProducentLorus/>
 				</div>
 
-				<div className='col-sm-10 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
+				<div className='col-sm-5 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SELECT * from data WHERE LENGTH(Wzór)  0</p>
 					<GetKrajProducentaIstnieje/>
 				</div>
 
-				<div className='col-sm-10 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
+				<div className='col-sm-5 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SELECT * from data WHERE MOD(id,2) = 0</p>
 					<IdParzyste/>
 				</div>

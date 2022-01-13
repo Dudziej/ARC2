@@ -30,12 +30,12 @@ const GetKrajProducentaIstnieje = (props: AppProps) => {
 
     return (
         <div className='getAllKrajProducentaIstnieje'>
-            <button onClick={getKrajProducentaIstnieje}>
+            <button className="btn btn-primary" onClick={getKrajProducentaIstnieje}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allKrajProducentaIstnieje.length}</p>
-            <button onClick={hideAndShow}>Pokaż wyniki</button>
+            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
             <div id='allKrajProducentaIstnieje' style={{display:'none'}}>
                 <ul className='list-group'>
                     {allKrajProducentaIstnieje.map((data, idx) => {
