@@ -80,5 +80,18 @@ app.get('/mongo/getWzor', function (req, res) {
     })
 })
 
+app.get('/mongo/getEven', function (req, res) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
+        var query = {id: {$mod: [2, 0]}}
+        db.collection('arc').find(query).toArray(function (err, result) {
+            if (err) throw err
+            res.send(JSON.stringify(result))
+        })
+    })
+})
+
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server listening on port: ${port}`));
