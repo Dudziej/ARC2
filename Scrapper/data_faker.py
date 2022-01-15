@@ -32,7 +32,10 @@ def get_providers(data_aggregated):
         providers[key] = provider
     return providers
 
+
 from unidecode import unidecode
+
+
 def get_fake_product(providers):
     product = {}
     for key, provider in providers.items():
@@ -44,8 +47,9 @@ def get_fake_product(providers):
 
 def get_fake_products(providers, count):
     products = []
-    for _ in range(0, count):
+    for i in range(1, count+1):
         products.append(get_fake_product(providers))
+        print(f"Generowanie {i}/{count}")
     return products
 
 
