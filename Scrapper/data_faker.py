@@ -2,6 +2,7 @@ import json
 import unicodedata
 
 from faker.providers import DynamicProvider
+from unidecode import unidecode
 
 
 def load_data():
@@ -33,22 +34,20 @@ def get_providers(data_aggregated):
     return providers
 
 
-from unidecode import unidecode
-
-
-def get_fake_product(providers):
+def get_fake_product(providers, id):
     product = {}
     for key, provider in providers.items():
         provider_result = provider.get_random_value().strip().lower()
         value = unidecode(provider_result)
         product[key.replace(" ", "_").lower()] = value
+    product['id'] = id
     return product
 
 
 def get_fake_products(providers, count):
     products = []
-    for i in range(1, count+1):
-        products.append(get_fake_product(providers))
+    for i in range(1, count + 1):
+        products.append(get_fake_product(providers, i))
         print(f"Generowanie {i}/{count}")
     return products
 
@@ -66,4 +65,4 @@ def generate_products(count):
 
 
 if __name__ == '__main__':
-    generate_products(count=100)
+    generate_products(count=1_000_000)
