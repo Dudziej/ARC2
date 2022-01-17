@@ -56,8 +56,8 @@ def init_data():
         mechanizm, _ = models.Producent.objects.get_or_create(text=e['mechanizm'])
         mechanizm.save()
 
-        zapiecie, _ = models.Producent.objects.get_or_create(text=e['zapięcie'])
-        mechanizm.save()
+        zapiecie, _ = models.Producent.objects.get_or_create(text=e['zapiecie'])
+        zapiecie.save()
 
     # zegarek = models.Zegarek()
     # print(zegarek)
