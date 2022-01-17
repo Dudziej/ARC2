@@ -168,3 +168,11 @@ def init_data_one(data, data_len):
     for i, e in enumerate(data):
         print(f"Processing data: {i + 1}/{data_len}")
         create_zegarekONE(e)
+
+
+def r1_1_1():
+    return ZegarekOne.objects.all()
+
+
+def r2_1_1():
+    pass
