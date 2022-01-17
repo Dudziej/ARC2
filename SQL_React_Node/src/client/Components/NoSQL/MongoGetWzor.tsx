@@ -35,14 +35,6 @@ const MongoGetWzor = (props: AppProps) => {
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allWzor.length}</p>
-            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
-            <div id='allWzor' style={{display:'none'}}>
-                <ul className='list-group'>
-                    {allWzor.map((data, idx) => {
-                        return <li key={idx} className='list-group-item'>{data.id} {data.Wzór}</li>
-                    })}
-                </ul>
-            </div>
         </div>
     )
         ;

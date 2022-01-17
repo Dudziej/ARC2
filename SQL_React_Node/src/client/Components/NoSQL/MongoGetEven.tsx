@@ -35,14 +35,6 @@ const MongoIdParzyste = (props: AppProps) => {
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allIdParzyste.length}</p>
-            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
-            <div id='allIdParzyste' style={{display:'none'}}>
-                <ul className='list-group'>
-                    {allIdParzyste.map((data, idx) => {
-                        return <li key={idx} className='list-group-item'>{data.id}</li>
-                    })}
-                </ul>
-            </div>
         </div>
     )
         ;
