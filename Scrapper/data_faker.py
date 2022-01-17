@@ -40,7 +40,7 @@ def get_fake_product(providers, id):
         provider_result = provider.get_random_value().strip().lower()
         value = unidecode(provider_result)
         key_clean = key.replace(" ", "_").lower().replace('ł', 'l').replace('ą', 'a').replace('ż', 'z') \
-            .replace('ę', 'e').replace('ó', 'o').replace('ć', 'c')
+            .replace('ę', 'e').replace('ó', 'o').replace('ć', 'c').replace('ś', 's')
 
         product[key_clean] = value
         product['id'] = id
