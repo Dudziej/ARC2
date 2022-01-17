@@ -39,8 +39,11 @@ def get_fake_product(providers, id):
     for key, provider in providers.items():
         provider_result = provider.get_random_value().strip().lower()
         value = unidecode(provider_result)
-        product[key.replace(" ", "_").lower()] = value
-    product['id'] = id
+        key_clean = key.replace(" ", "_").lower().replace('ł', 'l').replace('ą', 'a').replace('ż', 'z') \
+            .replace('ę', 'e').replace('ó', 'o').replace('ć', 'c')
+
+        product[key_clean] = value
+        product['id'] = id
     return product
 
 
@@ -65,4 +68,4 @@ def generate_products(count):
 
 
 if __name__ == '__main__':
-    generate_products(count=1_000_000)
+    generate_products(count=1_000)
