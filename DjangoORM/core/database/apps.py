@@ -10,13 +10,56 @@ class DatabaseConfig(AppConfig):
     def ready(self):
         import os
         if os.environ.get('RUN_MAIN', None) != 'true':
-            init_data()
+            print('initing')
+            try:
+                init_data()
+            except Exception as e:
+                print(e)
 
 
-def load_data():
-    with open('data.json', encoding='utf-8') as json_file:
+def load_data(path):
+    with open(path, encoding='utf-8') as json_file:
         return json.load(json_file)
 
 
 def init_data():
-    from DjangoORM.core.database.models import models
+    print('init2')
+    from database import models
+    # from DjangoORM.core.database import models
+    data = load_data('../../Scrapper/data_faker.json')
+
+    for e in data:
+        producent, _ = models.Producent.objects.get_or_create(text=e['producent'])
+        producent.save()
+
+        typ, _ = models.Producent.objects.get_or_create(text=e['typ'])
+        typ.save()
+
+        rodzaj, _ = models.Producent.objects.get_or_create(text=e['rodzaj'])
+        rodzaj.save()
+
+        wodoszczelnosc, _ = models.Producent.objects.get_or_create(text=e['wodoszczelnosc'])
+        producent.save()
+
+        kolor, _ = models.Producent.objects.get_or_create(text=e['kolor'])
+        kolor.save()
+
+        rodzaj_paska, _ = models.Producent.objects.get_or_create(text=e['rodzaj_paska'])
+        rodzaj_paska.save()
+
+        ksztalt_koperty, _ = models.Producent.objects.get_or_create(text=e['ksztalt_koperty'])
+        ksztalt_koperty.save()
+
+        kolor_tarczy, _ = models.Producent.objects.get_or_create(text=e['kolor_tarczy'])
+        kolor_tarczy.save()
+
+        mechanizm, _ = models.Producent.objects.get_or_create(text=e['mechanizm'])
+        mechanizm.save()
+
+        zapiecie, _ = models.Producent.objects.get_or_create(text=e['zapięcie'])
+        mechanizm.save()
+
+    # zegarek = models.Zegarek()
+    # print(zegarek)
+    # zegarek.save()
+    # print(zegarek)
