@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import GetAll from "./Components/GetAll";
-import GetAnalogowe from './Components/GetAnalogoweAll'
-import GetWodoszczelne200mAll from "./Components/GetWodoszczelne200m";
-import GetProducentLorus from "./Components/GetProducentLorus";
-import GetKrajProducentaIstnieje from "./Components/GetKrajProducentaIstnieje";
-import IdParzyste from "./Components/IdParzyste";
+import GetAll from "./Components/SQL/GetAll";
+import GetAnalogowe from './Components/SQL/GetAnalogoweAll'
+import GetWodoszczelne200mAll from "./Components/SQL/GetWodoszczelne200m";
+import GetProducentLorus from "./Components/SQL/GetProducentLorus";
+import GetKrajProducentaIstnieje from "./Components/SQL/GetKrajProducentaIstnieje";
+import IdParzyste from "./Components/SQL/IdParzyste";
 import MongoGetAll from "./Components/NoSQL/MongoGetAll";
 import MongoGetAnalogowe from "./Components/NoSQL/MongoGetAnalogowe";
 import MongoGet200m from "./Components/NoSQL/MongoGet200m";

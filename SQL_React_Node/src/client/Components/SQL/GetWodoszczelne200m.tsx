@@ -19,15 +19,6 @@ const GetWodoszczelne200mAll = (props: AppProps) => {
         }
     }
 
-    function hideAndShow() {
-        var x = document.getElementById("allWodoszczelne200m");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-
     return (
         <div className='getAllWodoszczelne200m'>
             <button className="btn btn-primary" onClick={getWodoszczelne200m}>
@@ -35,14 +26,6 @@ const GetWodoszczelne200mAll = (props: AppProps) => {
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allWodoszczelne200m.length}</p>
-            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
-            <div id='allWodoszczelne200m' style={{display:'none'}}>
-                <ul className='list-group'>
-                    {allWodoszczelne200m.map((data, idx) => {
-                        return <li key={idx} className='list-group-item'>{data.id} {data.Wodoszczelność}</li>
-                    })}
-                </ul>
-            </div>
         </div>
     )
         ;

@@ -19,15 +19,6 @@ const MongoGetProducentLorus = (props: AppProps) => {
         }
     }
 
-    function hideAndShow() {
-        var x = document.getElementById("allProducentLorus");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-
     return (
         <div className='getAllProducentLorus'>
             <button className="btn btn-primary" onClick={getWodoszczelne200m}>
@@ -35,14 +26,6 @@ const MongoGetProducentLorus = (props: AppProps) => {
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allProducentLorus.length}</p>
-            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
-            <div id='allProducentLorus' style={{display:'none'}}>
-                <ul className='list-group'>
-                    {allProducentLorus.map((data, idx) => {
-                        return <li key={idx} className='list-group-item'>{data.id} {data.Producent}</li>
-                    })}
-                </ul>
-            </div>
         </div>
     )
         ;

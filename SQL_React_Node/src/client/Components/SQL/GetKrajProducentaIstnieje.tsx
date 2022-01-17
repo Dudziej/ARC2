@@ -19,15 +19,6 @@ const GetKrajProducentaIstnieje = (props: AppProps) => {
         }
     }
 
-    function hideAndShow() {
-        var x = document.getElementById("allKrajProducentaIstnieje");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-
     return (
         <div className='getAllKrajProducentaIstnieje'>
             <button className="btn btn-primary" onClick={getKrajProducentaIstnieje}>
@@ -35,17 +26,8 @@ const GetKrajProducentaIstnieje = (props: AppProps) => {
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allKrajProducentaIstnieje.length}</p>
-            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
-            <div id='allKrajProducentaIstnieje' style={{display:'none'}}>
-                <ul className='list-group'>
-                    {allKrajProducentaIstnieje.map((data, idx) => {
-                        return <li key={idx} className='list-group-item'>{data.id} {data.Wzór}</li>
-                    })}
-                </ul>
-            </div>
         </div>
-    )
-        ;
+    );
 };
 
 interface AppProps {
