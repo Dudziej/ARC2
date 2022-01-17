@@ -59,7 +59,6 @@ def init_data():
         zapiecie, _ = models.Producent.objects.get_or_create(text=e['zapiecie'])
         zapiecie.save()
 
-    # zegarek = models.Zegarek()
-    # print(zegarek)
-    # zegarek.save()
-    # print(zegarek)
+        zegarek = models.Zegarek()
+        zegarek.save()
+
