@@ -2,7 +2,7 @@ import json
 
 from database.models import Producent, Typ, Rodzaj, Wodoszczelnosc, Kolor, RodzajPaska, KsztaltKoperty, \
     Mechanizm, Zapiecie, Zegarek, MaterialKoperty, RodzajSzkla, Gwarancja, CechyDodatkowe, Funkcje, Styl, Popularne, \
-    KrajProducenta, Wzor, LiniaZegarkow
+    KrajProducenta, Wzor, LiniaZegarkow, ZegarekOne
 from django.db import transaction
 from django.core import serializers
 from pathlib import Path
@@ -136,3 +136,35 @@ def generate_json(model_instance):
         dict_instance['id'] = x['pk']
         result.append(dict_instance)
     save_data(result, model_instance.__name__)
+
+
+def create_zegarekONE(e):
+    zegarek, _ = ZegarekOne.objects.get_or_create(id=e['id'])
+    zegarek.producent = e['producent']
+    zegarek.typ = e['typ']
+    zegarek.rodzaj = e['rodzaj']
+    zegarek.wodoszczelnosc = e['wodoszczelnosc']
+    zegarek.kolor = e['kolor']
+    zegarek.rodzaj_paska = e['rodzaj_paska']
+    zegarek.ksztalt_koperty = e['ksztalt_koperty']
+    zegarek.kolor_tarczy = e['kolor_tarczy']
+    zegarek.mechanizm = e['mechanizm']
+    zegarek.zapiecie = e['zapiecie']
+    zegarek.material_koperty = e['material_koperty']
+    zegarek.rodzaj_szkla = e['rodzaj_szkla']
+    zegarek.gwarancja = e['gwarancja']
+    zegarek.cechy_dodatkowe = e['cechy_dodatkowe']
+    zegarek.funkcje = e['funkcje']
+    zegarek.kolor_paska = e['kolor_paska']
+    zegarek.styl = e['styl']
+    zegarek.popularne = e['popularne']
+    zegarek.kraj_producenta = e['kraj_producenta']
+    zegarek.wzor = e['wzor']
+    zegarek.linia_zegarkow = e['linia_zegarkow']
+    zegarek.zapiecie = e['zapiecie']
+
+
+def init_data_one(data, data_len):
+    for i, e in enumerate(data):
+        print(f"Processing data: {i + 1}/{data_len}")
+        create_zegarekONE(e)
