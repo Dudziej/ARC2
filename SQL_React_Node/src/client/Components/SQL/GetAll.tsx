@@ -6,7 +6,7 @@ const GetAll = (props: AppProps) => {
     const [allData, setAllData] = useState([]);
     const [exTime, setExTime] = useState(0);
 
-    async function getData() {
+    async function getAllData() {
         try {
             let start = Date.now();
             const res = await fetch('/api/allData');
@@ -19,30 +19,15 @@ const GetAll = (props: AppProps) => {
         }
     }
 
-    function hideAndShow() {
-        var x = document.getElementById("allResults");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
+
 
     return (
         <div className='getAll'>
-            <button className="btn btn-primary" onClick={getData}>
+            <button className="btn btn-primary" onClick={getAllData}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allData.length}</p>
-            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
-            <div id='allResults' style={{display:'none'}}>
-                <ul className='list-group'>
-                    {allData.map((data, idx) => {
-                        return <li key={idx} className='list-group-item'>{data.id}</li>
-                    })}
-                </ul>
-            </div>
         </div>
     )
         ;

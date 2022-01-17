@@ -19,15 +19,6 @@ const MongoIdParzyste = (props: AppProps) => {
         }
     }
 
-    function hideAndShow() {
-        var x = document.getElementById("allIdParzyste");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-
     return (
         <div className='getAll'>
             <button className="btn btn-primary" onClick={getData}>

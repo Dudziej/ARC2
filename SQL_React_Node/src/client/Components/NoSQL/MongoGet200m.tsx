@@ -19,6 +19,14 @@ const MongoGet200m = (props: AppProps) => {
         }
     }
 
+    function hideAndShow() {
+        var x = document.getElementById("allAnalogowe");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
 
     return (
         <div className='getAnalogoweAll'>
@@ -27,6 +35,14 @@ const MongoGet200m = (props: AppProps) => {
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allWodoszczelne.length}</p>
+            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
+            <div id='allAnalogowe' style={{display:'none'}}>
+                <ul className='list-group'>
+                    {allWodoszczelne.map((data, idx) => {
+                        return <li key={idx} className='list-group-item'>{data.id} {data.Rodzaj}</li>
+                    })}
+                </ul>
+            </div>
         </div>
     )
         ;

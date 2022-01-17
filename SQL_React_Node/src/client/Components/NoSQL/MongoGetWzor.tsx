@@ -19,15 +19,6 @@ const MongoGetWzor = (props: AppProps) => {
         }
     }
 
-    function hideAndShow() {
-        var x = document.getElementById("allWzor");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-
     return (
         <div className='getAllWzor'>
             <button className="btn btn-primary" onClick={getKrajProducentaIstnieje}>

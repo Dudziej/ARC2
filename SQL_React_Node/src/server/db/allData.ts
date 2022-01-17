@@ -72,6 +72,18 @@ export const id_parzyste = async () => {
     });
 }
 
+export const create_table = async () => {
+    return new Promise((resolve,reject) => {
+
+        con.query("SELECT * from data WHERE MOD(id,2) = 0", (err, results) => {
+            if(err) {
+                return reject(err);
+            }
+            resolve(results);
+        });
+    });
+}
+
 export default {
     all,
     analogowe,
