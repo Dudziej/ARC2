@@ -19,15 +19,6 @@ const MongoGetWzor = (props: AppProps) => {
         }
     }
 
-    function hideAndShow() {
-        var x = document.getElementById("allWzor");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-
     return (
         <div className='getAllWzor'>
             <button className="btn btn-primary" onClick={getKrajProducentaIstnieje}>
@@ -35,14 +26,6 @@ const MongoGetWzor = (props: AppProps) => {
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allWzor.length}</p>
-            <button className="btn btn-warning" onClick={hideAndShow}>Pokaż wyniki</button>
-            <div id='allWzor' style={{display:'none'}}>
-                <ul className='list-group'>
-                    {allWzor.map((data, idx) => {
-                        return <li key={idx} className='list-group-item'>{data.id} {data.Wzór}</li>
-                    })}
-                </ul>
-            </div>
         </div>
     )
         ;
