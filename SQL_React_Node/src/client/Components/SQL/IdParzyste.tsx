@@ -27,8 +27,7 @@ const IdParzyste = (props: AppProps) => {
             <p>Czas wykonania : {exTime} Millisekund</p>
             <p>Pobrane obiekty: {allIdParzyste.length}</p>
         </div>
-    )
-        ;
+    );
 };
 
 interface AppProps {
