@@ -36,7 +36,7 @@ app.get('/mongo/getAnalogowe', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {Rodzaj: 'Analogowe'}
+        var query = {rodzaj: 'analogowe'}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
@@ -48,7 +48,7 @@ app.get('/mongo/getWodoszczelne200m', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {Wodoszczelność: '200m'}
+        var query = {wodoszczelnosc: '200m'}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
@@ -60,7 +60,7 @@ app.get('/mongo/getLorus', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {Producent: 'Lorus > Zegarki Lorus'}
+        var query = {producent: 'lorus > zegarki lorus'}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
@@ -72,7 +72,7 @@ app.get('/mongo/getWzor', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {Wzór: {$exists: true}}
+        var query = {wzor: {$exists: true}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
