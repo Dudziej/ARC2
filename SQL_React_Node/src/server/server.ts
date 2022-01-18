@@ -154,7 +154,7 @@ app.get('/mongo/5_2_1', function (req, res) {
         }
         db.collection('zegarekone').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.send(JSON.stringify(result))
+            res.sendStatus(200)
         })
     })
 })
@@ -177,7 +177,7 @@ app.get('/mongo/6_2_1', function (req, res) {
         var db = client.db('arc')
         db.collection('zegarekone').find({ "kolor": { "$exists": true } }).sort({'kolor': 1}).limit(10000).toArray(function (err, result) {
             if (err) throw err
-            res.send(JSON.stringify(result))
+            res.sendStatus(200)
         })
     })
 })
@@ -198,10 +198,10 @@ app.get('/mongo/7_2_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {id: {$mod: [2, 0]}}
-        db.collection('arc').find(query).toArray(function (err, result) {
+        var query = {kolor: /^cz/}
+        db.collection('zegarekone').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.send(JSON.stringify(result))
+            res.sendStatus(200)
         })
     })
 })
