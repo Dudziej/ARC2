@@ -25,7 +25,6 @@ const MongoGet1_1_1 = (props: AppProps) => {
             Pobierz wszystko
     </button>
     <p>Czas wykonania : {exTime} Millisekund</p>
-    <p>Pobrane obiekty: {allData.length}</p>
         </div>
 )
     ;

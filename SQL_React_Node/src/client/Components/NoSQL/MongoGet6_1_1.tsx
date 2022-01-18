@@ -9,7 +9,7 @@ const MongoGet6_1_1 = (props: AppProps) => {
     async function getData() {
         try {
             let start = Date.now();
-            const res = await fetch('/mongo/1_1_1');
+            const res = await fetch('/mongo/6_1_1');
             const data = await res.json();
             let end = Date.now();
             setAllData(data);
@@ -25,7 +25,6 @@ const MongoGet6_1_1 = (props: AppProps) => {
             Pobierz wszystko
     </button>
     <p>Czas wykonania : {exTime} Millisekund</p>
-    <p>Pobrane obiekty: {allData.length}</p>
         </div>
 )
     ;
