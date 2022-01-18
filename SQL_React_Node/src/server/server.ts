@@ -34,16 +34,10 @@ app.get('/mongo/2_1_1', function (req, res) {
                         as:'wzor'
                     }
             },
-            {$match:
-                    {wzor:
-                            {
-                                text: 'logo'
-                            }
-                    }
-            }
+            {$match: {'wzor.text': 'logo'}}
         ]).toArray(function (err, result) {
             if (err) throw err
-            res.send(JSON.stringify(result))
+            res.sendStatus(200)
         })
     })
 })

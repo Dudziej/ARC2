@@ -56,17 +56,17 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>SELECT * from data</p>
+					<p>MySQL</p>
 					<GetAll/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>find()</p>
+					<p>MongoDB</p>
 					<MongoGet1_1_1/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*----------------2-1-1----------------------------*/}
@@ -75,7 +75,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>SELECT * from data WHERE Rodzaj = 'Analogowe'</p>
+					<p>MySQL</p>
 					<GetAnalogowe/>
 				</div>
 
@@ -85,12 +85,12 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*------------------2-1-2------------------------------*/}
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MySQL</p>
 
 				</div>
 
@@ -100,12 +100,12 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*----------------2-2-1------------------------------*/}
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MySQL</p>
 
 				</div>
 
@@ -115,12 +115,12 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*------------------2-3-1------------------------------*/}
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MySQL</p>
 
 				</div>
 
@@ -130,7 +130,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*----------------3-1-1---------------------------------*/}
@@ -139,7 +139,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>SELECT * from data WHERE Wodoszczelność = '200m'</p>
+					<p>MySQL</p>
 					<GetWodoszczelne200mAll/>
 				</div>
 
@@ -149,12 +149,12 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*-------------------3-2-1------------------------------*/}
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MySQL</p>
 
 				</div>
 
@@ -164,7 +164,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*--------------------4-1-1-----------------------------*/}
@@ -173,7 +173,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>SELECT * from data WHERE Producent = 'Lorus'</p>
+					<p>MySQL</p>
 					<GetProducentLorus/>
 				</div>
 
@@ -183,12 +183,12 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*---------------------4-2-1----------------------------*/}
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MySQL</p>
 
 				</div>
 
@@ -198,7 +198,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*-------------------5-1-1------------------------------*/}
@@ -207,7 +207,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>SELECT * from data WHERE LENGTH(Wzór)  0</p>
+					<p>MySQL</p>
 					<GetKrajProducentaIstnieje/>
 				</div>
 
@@ -217,12 +217,12 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*--------------------5-2-1-----------------------------*/}
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MySQL</p>
 
 				</div>
 
@@ -232,7 +232,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*------------------6-1-1-------------------------------*/}
@@ -241,7 +241,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>SELECT * from data WHERE MOD(id,2) = 0</p>
+					<p>MySQL</p>
 					<IdParzyste/>
 				</div>
 
@@ -251,12 +251,12 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*------------------6-2-1-------------------------------*/}
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MySQL</p>
 
 				</div>
 
@@ -266,7 +266,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*------------------7-1-1-------------------------------*/}
@@ -275,7 +275,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MySQL</p>
 
 				</div>
 
@@ -285,13 +285,13 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 
 				{/*------------------7-2-1-------------------------------*/}
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MySQL</p>
 
 				</div>
 
@@ -301,7 +301,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>SQLite + Django ORM</p>
 
 				</div>
 				{/*------------------------------------------------------*/}
