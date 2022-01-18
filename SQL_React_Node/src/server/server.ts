@@ -82,10 +82,19 @@ app.get('/mongo/3_1_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {wzor: {$exists: true}}
-        db.collection('arc').find(query).toArray(function (err, result) {
+        db.collection('zegarek').aggregate([
+            {$lookup:
+                    {
+                        from: 'wzor',
+                        localField: 'wzor',
+                        foreignField: 'id',
+                        as:'wzor'
+                    }
+            },
+            {$group : {_id : "$wzor"}}
+        ]).toArray(function (err, result) {
             if (err) throw err
-            res.send(JSON.stringify(result))
+            res.sendStatus(200)
         })
     })
 })
