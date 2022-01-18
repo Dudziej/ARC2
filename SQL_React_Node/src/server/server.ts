@@ -175,8 +175,7 @@ app.get('/mongo/6_2_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {id: {$mod: [2, 0]}}
-        db.collection('arc').find(query).toArray(function (err, result) {
+        db.collection('zegarekone').find({ "kolor": { "$exists": true } }).sort({'kolor': 1}).limit(10000).toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
         })
