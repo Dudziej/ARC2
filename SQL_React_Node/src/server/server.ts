@@ -10,18 +10,18 @@ var MongoClient = require('mongodb').MongoClient
 
 const uri ="mongodb://127.0.0.1:27017";
 
-app.get('/mongo/getAll', function (req, res) {
+app.get('/mongo/1_1_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        db.collection('arc').find().toArray(function (err, result) {
+        db.collection('zegarekone').find().toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
         })
     })
 })
 
-app.get('/mongo/getOne', function (req, res) {
+app.get('/mongo/2_1_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -32,7 +32,7 @@ app.get('/mongo/getOne', function (req, res) {
     })
 })
 
-app.get('/mongo/getAnalogowe', function (req, res) {
+app.get('/mongo/2_1_2', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -44,7 +44,7 @@ app.get('/mongo/getAnalogowe', function (req, res) {
     })
 })
 
-app.get('/mongo/getWodoszczelne200m', function (req, res) {
+app.get('/mongo/2_2_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -56,7 +56,7 @@ app.get('/mongo/getWodoszczelne200m', function (req, res) {
     })
 })
 
-app.get('/mongo/getLorus', function (req, res) {
+app.get('/mongo/2_3_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -68,7 +68,7 @@ app.get('/mongo/getLorus', function (req, res) {
     })
 })
 
-app.get('/mongo/getWzor', function (req, res) {
+app.get('/mongo/3_1_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -80,7 +80,7 @@ app.get('/mongo/getWzor', function (req, res) {
     })
 })
 
-app.get('/mongo/getEven', function (req, res) {
+app.get('/mongo/3_2_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -92,6 +92,101 @@ app.get('/mongo/getEven', function (req, res) {
     })
 })
 
+app.get('/mongo/4_1_1', function (req, res) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
+        var query = {id: {$mod: [2, 0]}}
+        db.collection('arc').find(query).toArray(function (err, result) {
+            if (err) throw err
+            res.send(JSON.stringify(result))
+        })
+    })
+})
+
+app.get('/mongo/4_2_1', function (req, res) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
+        var query = {id: {$mod: [2, 0]}}
+        db.collection('arc').find(query).toArray(function (err, result) {
+            if (err) throw err
+            res.send(JSON.stringify(result))
+        })
+    })
+})
+
+app.get('/mongo/5_1_1', function (req, res) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
+        var query = {id: {$mod: [2, 0]}}
+        db.collection('arc').find(query).toArray(function (err, result) {
+            if (err) throw err
+            res.send(JSON.stringify(result))
+        })
+    })
+})
+
+app.get('/mongo/5_2_1', function (req, res) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
+        var query = {id: {$mod: [2, 0]}}
+        db.collection('arc').find(query).toArray(function (err, result) {
+            if (err) throw err
+            res.send(JSON.stringify(result))
+        })
+    })
+})
+
+app.get('/mongo/6_1_1', function (req, res) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
+        var query = {id: {$mod: [2, 0]}}
+        db.collection('arc').find(query).toArray(function (err, result) {
+            if (err) throw err
+            res.send(JSON.stringify(result))
+        })
+    })
+})
+
+app.get('/mongo/6_2_1', function (req, res) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
+        var query = {id: {$mod: [2, 0]}}
+        db.collection('arc').find(query).toArray(function (err, result) {
+            if (err) throw err
+            res.send(JSON.stringify(result))
+        })
+    })
+})
+
+app.get('/mongo/7_1_1', function (req, res) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
+        var query = {id: {$mod: [2, 0]}}
+        db.collection('arc').find(query).toArray(function (err, result) {
+            if (err) throw err
+            res.send(JSON.stringify(result))
+        })
+    })
+})
+
+app.get('/mongo/7_2_1', function (req, res) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
+        var query = {id: {$mod: [2, 0]}}
+        db.collection('arc').find(query).toArray(function (err, result) {
+            if (err) throw err
+            res.send(JSON.stringify(result))
+        })
+    })
+})
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server listening on port: ${port}`));

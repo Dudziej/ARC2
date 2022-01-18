@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
 
-const MongoGetAll = (props: AppProps) => {
+const MongoGet1_1_1 = (props: AppProps) => {
 
     const [allData, setAllData] = useState([]);
     const [exTime, setExTime] = useState(0);
@@ -9,7 +9,7 @@ const MongoGetAll = (props: AppProps) => {
     async function getData() {
         try {
             let start = Date.now();
-            const res = await fetch('/mongo/getAll');
+            const res = await fetch('/mongo/1_1_1');
             const data = await res.json();
             let end = Date.now();
             setAllData(data);
@@ -34,4 +34,4 @@ const MongoGetAll = (props: AppProps) => {
 interface AppProps {
 }
 
-export default MongoGetAll;
+export default MongoGet1_1_1;
