@@ -170,9 +170,3 @@ def init_data_one(data, data_len):
         create_zegarekONE(e)
 
 
-def r1_1_1():
-    return ZegarekOne.objects.all()
-
-
-def r2_1_1():
-    pass
