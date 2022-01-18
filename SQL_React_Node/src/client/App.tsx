@@ -21,6 +21,7 @@ import MongoGet6_1_1 from "./Components/NoSQL/MongoGet6_1_1";
 import MongoGet6_2_1 from "./Components/NoSQL/MongoGet6_2_1";
 import MongoGet7_1_1 from "./Components/NoSQL/MongoGet7_1_1";
 import MongoGet7_2_1 from "./Components/NoSQL/MongoGet7_2_1";
+import OrmGet1_1_1 from "./Components/ORM/OrmGet1_1_1";
 
 const App = (props: AppProps) => {
 
@@ -67,7 +68,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet1_1_1/>
 				</div>
 				{/*----------------2-1-1----------------------------*/}
 				<hr className="mt-4"/>

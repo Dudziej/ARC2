@@ -70,10 +70,10 @@ app.get('/mongo/2_3_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {producent: 'lorus > zegarki lorus'}
-        db.collection('arc').find(query).toArray(function (err, result) {
+        var query = {wzor: 'logo'}
+        db.collection('zegarekone').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.send(JSON.stringify(result))
+            res.sendStatus(200)
         })
     })
 })
@@ -94,10 +94,9 @@ app.get('/mongo/3_2_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {id: {$mod: [2, 0]}}
-        db.collection('arc').find(query).toArray(function (err, result) {
+        db.collection('zegarekone').aggregate([{$group : {_id : "$wzor"}}]).toArray(function (err, result) {
             if (err) throw err
-            res.send(JSON.stringify(result))
+            res.sendStatus(200)
         })
     })
 })
@@ -118,10 +117,15 @@ app.get('/mongo/4_2_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {id: {$mod: [2, 0]}}
-        db.collection('arc').find(query).toArray(function (err, result) {
+        var query = {
+            $and: [
+                {wzor: 'logo'},
+                {$or: [{kolor:'czarny'}, {kolor:'czarne'}]}
+            ]
+        }
+        db.collection('zegarekone').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.send(JSON.stringify(result))
+            res.sendStatus(200)
         })
     })
 })
@@ -142,8 +146,13 @@ app.get('/mongo/5_2_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {id: {$mod: [2, 0]}}
-        db.collection('arc').find(query).toArray(function (err, result) {
+        var query = {
+            $and: [
+                {wzor: 'logo'},
+                {kolor: { $ne :'czarny'}}
+            ]
+        }
+        db.collection('zegarekone').find(query).toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
         })
