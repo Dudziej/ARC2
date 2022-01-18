@@ -80,7 +80,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet2_1_1/>
 				</div>
 
@@ -95,7 +95,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet2_1_2/>
 				</div>
 
@@ -110,7 +110,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet2_2_1/>
 				</div>
 
@@ -125,7 +125,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet2_3_1/>
 				</div>
 
@@ -144,7 +144,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet3_1_1/>
 				</div>
 
@@ -159,7 +159,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet3_2_1/>
 				</div>
 
@@ -173,12 +173,12 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>SELECT * from data WHERE Producent = 'Lorus  Zegarki Lorus'</p>
+					<p>SELECT * from data WHERE Producent = 'Lorus'</p>
 					<GetProducentLorus/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet4_1_1/>
 				</div>
 
@@ -193,7 +193,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet4_2_1/>
 				</div>
 
@@ -212,7 +212,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet5_1_1/>
 				</div>
 
@@ -227,7 +227,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet5_2_1/>
 				</div>
 
@@ -246,7 +246,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet6_1_1/>
 				</div>
 
@@ -261,7 +261,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet6_2_1/>
 				</div>
 
@@ -280,7 +280,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet7_1_1/>
 				</div>
 
@@ -296,7 +296,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p></p>
+					<p>MongoDB</p>
 					<MongoGet7_2_1/>
 				</div>
 

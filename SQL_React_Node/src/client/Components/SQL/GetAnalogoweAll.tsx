@@ -25,7 +25,6 @@ const GetAnalogoweAll = (props: AppProps) => {
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
-            <p>Pobrane obiekty: {allAnalogowe.length}</p>
         </div>
     )
         ;

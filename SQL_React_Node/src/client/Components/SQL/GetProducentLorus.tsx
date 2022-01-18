@@ -25,7 +25,6 @@ const GetProducentLorus = (props: AppProps) => {
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
-            <p>Pobrane obiekty: {allProducentLorus.length}</p>
         </div>
     )
         ;

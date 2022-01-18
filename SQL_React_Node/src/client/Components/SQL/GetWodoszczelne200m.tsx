@@ -25,7 +25,6 @@ const GetWodoszczelne200mAll = (props: AppProps) => {
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
-            <p>Pobrane obiekty: {allWodoszczelne200m.length}</p>
         </div>
     )
         ;

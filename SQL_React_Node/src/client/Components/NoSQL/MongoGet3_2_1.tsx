@@ -3,16 +3,14 @@ import {useState, useEffect} from 'react';
 
 const MongoGet3_2_1 = (props: AppProps) => {
 
-    const [allData, setAllData] = useState([]);
     const [exTime, setExTime] = useState(0);
 
     async function getData() {
         try {
             let start = Date.now();
             const res = await fetch('/mongo/3_2_1');
-            const data = await res.json();
+            const data = await res.status===200;
             let end = Date.now();
-            setAllData(data);
             setExTime(end - start)
         } catch (error) {
             console.log(error);
@@ -21,10 +19,10 @@ const MongoGet3_2_1 = (props: AppProps) => {
 
     return (
         <div className='getAll'>
-        <button className="btn btn-primary" onClick={getData}>
-            Pobierz wszystko
-    </button>
-    <p>Czas wykonania : {exTime} Millisekund</p>
+            <button className="btn btn-primary" onClick={getData}>
+                Pobierz wszystko
+            </button>
+            <p>Czas wykonania : {exTime} Millisekund</p>
         </div>
 )
     ;

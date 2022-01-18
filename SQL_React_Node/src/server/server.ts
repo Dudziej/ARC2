@@ -25,9 +25,25 @@ app.get('/mongo/2_1_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        db.collection('arc').find().limit(1).toArray(function (err, result) {
+        db.collection('zegarek').aggregate([
+            {$lookup:
+                    {
+                        from: 'wzor',
+                        localField: 'wzor',
+                        foreignField: 'id',
+                        as:'wzor'
+                    }
+            },
+            {$match:
+                    {wzor:
+                            {
+                                text: 'logo'
+                            }
+                    }
+            }
+        ]).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -39,7 +55,7 @@ app.get('/mongo/2_1_2', function (req, res) {
         var query = {rodzaj: 'analogowe'}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -51,7 +67,7 @@ app.get('/mongo/2_2_1', function (req, res) {
         var query = {wodoszczelnosc: '200m'}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -63,7 +79,7 @@ app.get('/mongo/2_3_1', function (req, res) {
         var query = {producent: 'lorus > zegarki lorus'}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -75,7 +91,7 @@ app.get('/mongo/3_1_1', function (req, res) {
         var query = {wzor: {$exists: true}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -87,7 +103,7 @@ app.get('/mongo/3_2_1', function (req, res) {
         var query = {id: {$mod: [2, 0]}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -99,7 +115,7 @@ app.get('/mongo/4_1_1', function (req, res) {
         var query = {id: {$mod: [2, 0]}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -111,7 +127,7 @@ app.get('/mongo/4_2_1', function (req, res) {
         var query = {id: {$mod: [2, 0]}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -123,7 +139,7 @@ app.get('/mongo/5_1_1', function (req, res) {
         var query = {id: {$mod: [2, 0]}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -135,7 +151,7 @@ app.get('/mongo/5_2_1', function (req, res) {
         var query = {id: {$mod: [2, 0]}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -147,7 +163,7 @@ app.get('/mongo/6_1_1', function (req, res) {
         var query = {id: {$mod: [2, 0]}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -159,7 +175,7 @@ app.get('/mongo/6_2_1', function (req, res) {
         var query = {id: {$mod: [2, 0]}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -171,7 +187,7 @@ app.get('/mongo/7_1_1', function (req, res) {
         var query = {id: {$mod: [2, 0]}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -183,7 +199,7 @@ app.get('/mongo/7_2_1', function (req, res) {
         var query = {id: {$mod: [2, 0]}}
         db.collection('arc').find(query).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
