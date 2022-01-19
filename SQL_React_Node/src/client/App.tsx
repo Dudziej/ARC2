@@ -49,12 +49,35 @@ const App = (props: AppProps) => {
 							System - Windows 10 64 bit
 						</p>
 				</div>
+				<div className="col-sm-4 border rounded shadow text-primary text-center">
+					<h3 className="mt-2 mb-2">Ilość Danych</h3>
+					<p>
+						Dla wielu tabel - 5106
+					</p>
+					<p>
+						Dla jednej tabeli - 1000000
+					</p>
+
+				</div>
+				<div className="col-sm-4 border rounded shadow text-primary text-center">
+					<h3 className="mt-2 mb-2">Wersje Baz</h3>
+					<p>
+						MongoDB - 4.4.3
+					</p>
+					<p>
+						MySQL - 8.0
+					</p>
+					<p>
+						SQLite - ??
+					</p>
+
+				</div>
 			</div>
 			<h2 className="text-primary text-center">SQL vs NOSQL vs SQL + ORM</h2>
 			<div className='row justify-content-center'>
 				{/*-------------------1-1-1---------------------------*/}
 				<hr className="mt-4"/>
-				<h3 className="text-primary text-center">Cała tabela "Zegarek"</h3>
+				<h3 className="text-primary text-center">Cała tabela "Zegarek" (Jedna tabela)</h3>
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -72,6 +95,9 @@ const App = (props: AppProps) => {
 					<OrmGet1_1_1/>
 				</div>
 				{/*-------------------1-2-1---------------------------*/}
+				<hr className="mt-4"/>
+				<h3 className="text-primary text-center">Cała tabela "Zegarek" (Wiele tabel)</h3>
+				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
 				</div>
@@ -87,7 +113,7 @@ const App = (props: AppProps) => {
 				</div>
 				{/*----------------2-1-1----------------------------*/}
 				<hr className="mt-4"/>
-				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo”</h3>
+				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” (Wiele tabel)</h3>
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -135,6 +161,9 @@ const App = (props: AppProps) => {
 
 				</div>
 				{/*------------------2-3-1------------------------------*/}
+				<hr className="mt-4"/>
+				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” (Jedna tabela)</h3>
+				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
 
@@ -151,7 +180,7 @@ const App = (props: AppProps) => {
 				</div>
 				{/*----------------3-1-1---------------------------------*/}
 				<hr className="mt-4"/>
-				<h3 className="text-primary text-center">Wszystkie wzory zegarków</h3>
+				<h3 className="text-primary text-center">Wszystkie wzory zegarków (Wiele tabel)</h3>
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -169,6 +198,9 @@ const App = (props: AppProps) => {
 
 				</div>
 				{/*-------------------3-2-1------------------------------*/}
+				<hr className="mt-4"/>
+				<h3 className="text-primary text-center">Wszystkie wzory zegarków (Jedna tabela)</h3>
+				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
 
@@ -185,7 +217,7 @@ const App = (props: AppProps) => {
 				</div>
 				{/*--------------------4-1-1-----------------------------*/}
 				<hr className="mt-4"/>
-				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” i kolor == “czarny” OR kolor == ‘czarne’</h3>
+				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” i kolor == “czarny” OR kolor == ‘czarne’ (Wiele tabel)</h3>
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -203,6 +235,9 @@ const App = (props: AppProps) => {
 
 				</div>
 				{/*---------------------4-2-1----------------------------*/}
+				<hr className="mt-4"/>
+				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” i kolor == “czarny” OR kolor == ‘czarne’ (Jedna tabela)</h3>
+				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
 
@@ -219,7 +254,7 @@ const App = (props: AppProps) => {
 				</div>
 				{/*-------------------5-1-1------------------------------*/}
 				<hr className="mt-4"/>
-				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” i  kolor != “czarny”</h3>
+				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” i  kolor != “czarny” (Wiele tabel)</h3>
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -237,6 +272,9 @@ const App = (props: AppProps) => {
 
 				</div>
 				{/*--------------------5-2-1-----------------------------*/}
+				<hr className="mt-4"/>
+				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” i  kolor != “czarny” (Jedna Tabela)</h3>
+				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
 
@@ -253,7 +291,7 @@ const App = (props: AppProps) => {
 				</div>
 				{/*------------------6-1-1-------------------------------*/}
 				<hr className="mt-4"/>
-				<h3 className="text-primary text-center">Wszystkie zegarki posortowane alfabetycznie po kolorze</h3>
+				<h3 className="text-primary text-center">Wszystkie zegarki posortowane alfabetycznie po kolorze (Wiele tabel)</h3>
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -271,6 +309,9 @@ const App = (props: AppProps) => {
 
 				</div>
 				{/*------------------6-2-1-------------------------------*/}
+				<hr className="mt-4"/>
+				<h3 className="text-primary text-center">Wszystkie zegarki posortowane alfabetycznie po kolorze (Jedna tabela)</h3>
+				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
 
@@ -287,7 +328,7 @@ const App = (props: AppProps) => {
 				</div>
 				{/*------------------7-1-1-------------------------------*/}
 				<hr className="mt-4"/>
-				<h3 className="text-primary text-center">Wszystkie kolory zaczynające się na “cz”</h3>
+				<h3 className="text-primary text-center">Wszystkie kolory zaczynające się na “cz” (Wiele Tabel)</h3>
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -306,6 +347,9 @@ const App = (props: AppProps) => {
 				</div>
 
 				{/*------------------7-2-1-------------------------------*/}
+				<hr className="mt-4"/>
+				<h3 className="text-primary text-center">Wszystkie kolory zaczynające się na “cz” (Jedna tabela)</h3>
+				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
 
