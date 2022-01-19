@@ -68,4 +68,4 @@ def generate_products(count):
 
 
 if __name__ == '__main__':
-    generate_products(count=1_000)
+    generate_products(count=10000)
