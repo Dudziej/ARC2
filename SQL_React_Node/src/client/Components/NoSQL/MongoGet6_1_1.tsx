@@ -9,7 +9,7 @@ const MongoGet6_1_1 = (props: AppProps) => {
         try {
             let start = Date.now();
             const res = await fetch('/mongo/6_1_1');
-            const data = await res.json();
+            const data = await res.status===200;
             let end = Date.now();
             setExTime(end - start)
         } catch (error) {
