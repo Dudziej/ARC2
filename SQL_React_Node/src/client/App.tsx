@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import MongoGet1_1_1 from "./Components/NoSQL/MongoGet1_1_1";
 import MongoGet2_1_1 from "./Components/NoSQL/MongoGet2_1_1";
-import MongoGet2_1_2 from "./Components/NoSQL/MongoGet2_1_2";
 import MongoGet2_2_1 from "./Components/NoSQL/MongoGet2_2_1";
 import MongoGet2_3_1 from "./Components/NoSQL/MongoGet2_3_1";
 import MongoGet3_1_1 from "./Components/NoSQL/MongoGet3_1_1";
@@ -33,6 +32,20 @@ import MySQL6_1_1 from "./Components/SQL/MySQL6_1_1";
 import MySQL6_2_1 from "./Components/SQL/MySQL6_2_1";
 import MySQL7_1_1 from "./Components/SQL/MySQL7_1_1";
 import MySQL7_2_1 from "./Components/SQL/MySQL7_2_1";
+import OrmGet1_2_1 from "./Components/ORM/OrmGet1_2_1";
+import OrmGet2_1_1 from "./Components/ORM/OrmGet2_1_1";
+import OrmGet2_2_1 from "./Components/ORM/OrmGet2_2_1";
+import OrmGet2_3_1 from "./Components/ORM/OrmGet2_3_1";
+import OrmGet3_1_1 from "./Components/ORM/OrmGet3_1_1";
+import OrmGet3_2_1 from "./Components/ORM/OrmGet3_2_1";
+import OrmGet4_1_1 from "./Components/ORM/OrmGet4_1_1";
+import OrmGet4_2_1 from "./Components/ORM/OrmGet4_2_1";
+import OrmGet5_1_1 from "./Components/ORM/OrmGet5_1_1";
+import OrmGet5_2_1 from "./Components/ORM/OrmGet5_2_1";
+import OrmGet6_1_1 from "./Components/ORM/OrmGet6_1_1";
+import OrmGet6_2_1 from "./Components/ORM/OrmGet6_2_1";
+import OrmGet7_1_1 from "./Components/ORM/OrmGet7_1_1";
+import OrmGet7_2_1 from "./Components/ORM/OrmGet7_2_1";
 
 const App = (props: AppProps) => {
 
@@ -120,11 +133,11 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet1_2_1/>
 				</div>
 				{/*----------------2-1-1----------------------------*/}
 				<hr className="mt-4"/>
-				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” (Wiele tabel)</h3>
+				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” (Wiele tabel, wiele zapytań)</h3>
 				<hr className="mb-4"/>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -139,24 +152,12 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
-				</div>
-				{/*------------------2-1-2------------------------------*/}
-				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>MySQL</p>
-
-				</div>
-
-				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>MongoDB</p>
-					<MongoGet2_1_2/>
-				</div>
-
-				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>SQLite + Django ORM</p>
-
+					<OrmGet2_1_1/>
 				</div>
 				{/*----------------2-2-1------------------------------*/}
+				<hr className="mt-4"/>
+				<h3 className="text-primary text-center">Zegarki gdzie wzór == “logo” (Wiele tabel, Jedno zapytanie)</h3>
+				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
 					<MySQL2_2_1/>
@@ -169,7 +170,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet2_2_1/>
 				</div>
 				{/*------------------2-3-1------------------------------*/}
 				<hr className="mt-4"/>
@@ -187,7 +188,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet2_3_1/>
 				</div>
 				{/*----------------3-1-1---------------------------------*/}
 				<hr className="mt-4"/>
@@ -206,7 +207,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet3_1_1/>
 				</div>
 				{/*-------------------3-2-1------------------------------*/}
 				<hr className="mt-4"/>
@@ -224,7 +225,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet3_2_1/>
 				</div>
 				{/*--------------------4-1-1-----------------------------*/}
 				<hr className="mt-4"/>
@@ -243,7 +244,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet4_1_1/>
 				</div>
 				{/*---------------------4-2-1----------------------------*/}
 				<hr className="mt-4"/>
@@ -261,7 +262,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet4_2_1/>
 				</div>
 				{/*-------------------5-1-1------------------------------*/}
 				<hr className="mt-4"/>
@@ -280,7 +281,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet5_1_1/>
 				</div>
 				{/*--------------------5-2-1-----------------------------*/}
 				<hr className="mt-4"/>
@@ -298,7 +299,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet5_2_1/>
 				</div>
 				{/*------------------6-1-1-------------------------------*/}
 				<hr className="mt-4"/>
@@ -317,7 +318,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet6_1_1/>
 				</div>
 				{/*------------------6-2-1-------------------------------*/}
 				<hr className="mt-4"/>
@@ -329,13 +330,13 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>MongoDB - limit do 10 000</p>
+					<p>MongoDB</p>
 					<MongoGet6_2_1/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet6_2_1/>
 				</div>
 				{/*------------------7-1-1-------------------------------*/}
 				<hr className="mt-4"/>
@@ -354,7 +355,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet7_1_1/>
 				</div>
 
 				{/*------------------7-2-1-------------------------------*/}
@@ -373,7 +374,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-
+					<OrmGet7_2_1/>
 				</div>
 				{/*------------------------------------------------------*/}
 			</div>
