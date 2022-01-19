@@ -67,7 +67,7 @@ def r_3_1_1(request):
 
 
 def r_3_2_1(request):
-    result = ZegarekOne.objects.all().distinct('wzor')
+    result = ZegarekOne.objects.all().values_list('wzor', flat=True).distinct()
     list(result)
     return HttpResponse("OK")
 
