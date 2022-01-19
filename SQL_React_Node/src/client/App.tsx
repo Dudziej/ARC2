@@ -63,10 +63,10 @@ const App = (props: AppProps) => {
 				<div className="col-sm-4 border rounded shadow text-primary text-center">
 					<h3 className="mt-2 mb-2">Ilość Danych</h3>
 					<p>
-						Dla wielu tabel - 5106
+						Dla wielu tabel - 100000
 					</p>
 					<p>
-						Dla jednej tabeli - 1000000
+						Dla jednej tabeli - 100000
 					</p>
 
 				</div>
@@ -79,7 +79,7 @@ const App = (props: AppProps) => {
 						MySQL - 8.0
 					</p>
 					<p>
-						SQLite - ??
+						SQLite - 3.3.7
 					</p>
 
 				</div>

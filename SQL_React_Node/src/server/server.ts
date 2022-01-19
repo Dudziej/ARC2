@@ -180,7 +180,7 @@ app.get('/mongo/1_2_1', function (req, res) {
             },
         ]).toArray(function (err, result) {
             if (err) throw err
-            res.send(JSON.stringify(result))
+            res.sendStatus(200)
         })
     })
 })
@@ -210,8 +210,17 @@ app.get('/mongo/2_1_2', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {rodzaj: 'analogowe'}
-        db.collection('arc').find(query).toArray(function (err, result) {
+        db.collection('zegarek').aggregate([
+            {$lookup:
+                    {
+                        from: 'wzor',
+                        localField: 'wzor',
+                        foreignField: 'id',
+                        as:'wzor'
+                    }
+            },
+            {$match: {'wzor.text': 'logo'}}
+        ]).toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
         })
@@ -222,8 +231,17 @@ app.get('/mongo/2_2_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        var query = {wodoszczelnosc: '200m'}
-        db.collection('arc').find(query).toArray(function (err, result) {
+        db.collection('zegarek').aggregate([
+            {$lookup:
+                    {
+                        from: 'wzor',
+                        localField: 'wzor',
+                        foreignField: 'id',
+                        as:'wzor'
+                    }
+            },
+            {$match: {'wzor.text': 'logo'}}
+        ]).toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
         })
