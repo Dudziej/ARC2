@@ -1,18 +1,18 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
 
-const GetProducentLorus = (props: AppProps) => {
+const MySQL5_1_1 = (props: AppProps) => {
 
-    const [allProducentLorus, setAllProducentLorus] = useState([]);
+    const [data, setData] = useState([]);
     const [exTime, setExTime] = useState(0);
 
-    async function getWodoszczelne200m() {
+    async function getData() {
         try {
             let start = Date.now();
-            const res = await fetch('/api/producentLorus');
+            const res = await fetch('/MySQL/5_1_1');
             const data = await res.json();
             let end = Date.now();
-            setAllProducentLorus(data);
+            setData(data);
             setExTime(end - start)
         } catch (error) {
             console.log(error);
@@ -20,11 +20,12 @@ const GetProducentLorus = (props: AppProps) => {
     }
 
     return (
-        <div className='getAllProducentLorus'>
-            <button className="btn btn-primary" onClick={getWodoszczelne200m}>
+        <div className='MySQL'>
+            <button className="btn btn-primary" onClick={getData}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
+            <p>Pobrane obiekty : {data.length}</p>
         </div>
     )
         ;
@@ -33,4 +34,4 @@ const GetProducentLorus = (props: AppProps) => {
 interface AppProps {
 }
 
-export default GetProducentLorus;
+export default MySQL5_1_1;

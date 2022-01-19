@@ -1,11 +1,5 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import GetAll from "./Components/SQL/GetAll";
-import GetAnalogowe from './Components/SQL/GetAnalogoweAll'
-import GetWodoszczelne200mAll from "./Components/SQL/GetWodoszczelne200m";
-import GetProducentLorus from "./Components/SQL/GetProducentLorus";
-import GetKrajProducentaIstnieje from "./Components/SQL/GetKrajProducentaIstnieje";
-import IdParzyste from "./Components/SQL/IdParzyste";
 import MongoGet1_1_1 from "./Components/NoSQL/MongoGet1_1_1";
 import MongoGet2_1_1 from "./Components/NoSQL/MongoGet2_1_1";
 import MongoGet2_1_2 from "./Components/NoSQL/MongoGet2_1_2";
@@ -23,6 +17,22 @@ import MongoGet7_1_1 from "./Components/NoSQL/MongoGet7_1_1";
 import MongoGet7_2_1 from "./Components/NoSQL/MongoGet7_2_1";
 import OrmGet1_1_1 from "./Components/ORM/OrmGet1_1_1";
 import MongoGet1_2_1 from "./Components/NoSQL/MongoGet1_2_1";
+
+import MySQL1_1_1 from "./Components/SQL/MySQL1_1_1";
+import MySQL1_2_1 from "./Components/SQL/MySQL1_2_1";
+import MySQL2_1_1 from "./Components/SQL/MySQL2_1_1";
+import MySQL2_2_1 from "./Components/SQL/MySQL2_2_1";
+import MySQL2_3_1 from "./Components/SQL/MySQL2_3_1";
+import MySQL3_1_1 from "./Components/SQL/MySQL3_1_1";
+import MySQL3_2_1 from "./Components/SQL/MySQL3_2_1";
+import MySQL4_1_1 from "./Components/SQL/MySQL4_1_1";
+import MySQL4_2_1 from "./Components/SQL/MySQL4_2_1";
+import MySQL5_1_1 from "./Components/SQL/MySQL5_1_1";
+import MySQL5_2_1 from "./Components/SQL/MySQL5_2_1";
+import MySQL6_1_1 from "./Components/SQL/MySQL6_1_1";
+import MySQL6_2_1 from "./Components/SQL/MySQL6_2_1";
+import MySQL7_1_1 from "./Components/SQL/MySQL7_1_1";
+import MySQL7_2_1 from "./Components/SQL/MySQL7_2_1";
 
 const App = (props: AppProps) => {
 
@@ -82,7 +92,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<GetAll/>
+					<MySQL1_1_1/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -100,6 +110,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
+					<MySQL1_2_1/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -118,7 +129,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<GetAnalogowe/>
+					<MySQL2_1_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -148,7 +159,7 @@ const App = (props: AppProps) => {
 				{/*----------------2-2-1------------------------------*/}
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-
+					<MySQL2_2_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -166,7 +177,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-
+					<MySQL2_3_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -185,7 +196,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<GetWodoszczelne200mAll/>
+					<MySQL3_1_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -203,7 +214,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-
+					<MySQL3_2_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -222,7 +233,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<GetProducentLorus/>
+					<MySQL4_1_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -240,7 +251,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-
+					<MySQL4_2_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -259,7 +270,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<GetKrajProducentaIstnieje/>
+					<MySQL5_1_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -277,7 +288,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-
+					<MySQL5_2_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -296,7 +307,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<IdParzyste/>
+					<MySQL6_1_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -314,7 +325,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-
+					<MySQL6_2_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -333,7 +344,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-
+					<MySQL7_1_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -352,7 +363,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-
+					<MySQL7_2_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>

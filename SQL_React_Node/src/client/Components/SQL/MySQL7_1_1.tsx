@@ -1,18 +1,18 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
 
-const GetKrajProducentaIstnieje = (props: AppProps) => {
+const MySQL7_1_1 = (props: AppProps) => {
 
-    const [allKrajProducentaIstnieje, setAllKrajProducentaIstnieje] = useState([]);
+    const [data, setData] = useState([]);
     const [exTime, setExTime] = useState(0);
 
-    async function getKrajProducentaIstnieje() {
+    async function getData() {
         try {
             let start = Date.now();
-            const res = await fetch('/api/krajProducentaIstnieje');
+            const res = await fetch('/MySQL/7_1_1');
             const data = await res.json();
             let end = Date.now();
-            setAllKrajProducentaIstnieje(data);
+            setData(data);
             setExTime(end - start)
         } catch (error) {
             console.log(error);
@@ -20,16 +20,18 @@ const GetKrajProducentaIstnieje = (props: AppProps) => {
     }
 
     return (
-        <div className='getAllKrajProducentaIstnieje'>
-            <button className="btn btn-primary" onClick={getKrajProducentaIstnieje}>
+        <div className='MySQL'>
+            <button className="btn btn-primary" onClick={getData}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
+            <p>Pobrane obiekty : {data.length}</p>
         </div>
-    );
+    )
+        ;
 };
 
 interface AppProps {
 }
 
-export default GetKrajProducentaIstnieje;
+export default MySQL7_1_1;

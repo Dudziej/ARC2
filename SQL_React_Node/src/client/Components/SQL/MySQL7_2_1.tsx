@@ -1,18 +1,18 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
 
-const GetAnalogoweAll = (props: AppProps) => {
+const MySQL7_2_1 = (props: AppProps) => {
 
-    const [allAnalogowe, setAllAnalogowe] = useState([]);
+    const [data, setData] = useState([]);
     const [exTime, setExTime] = useState(0);
 
-    async function getAnalogowe() {
+    async function getData() {
         try {
             let start = Date.now();
-            const res = await fetch('/api/analogowe');
+            const res = await fetch('/MySQL/7_2_1');
             const data = await res.json();
             let end = Date.now();
-            setAllAnalogowe(data);
+            setData(data);
             setExTime(end - start)
         } catch (error) {
             console.log(error);
@@ -20,11 +20,12 @@ const GetAnalogoweAll = (props: AppProps) => {
     }
 
     return (
-        <div className='getAnalogoweAll'>
-            <button className="btn btn-primary" onClick={getAnalogowe}>
+        <div className='MySQL'>
+            <button className="btn btn-primary" onClick={getData}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
+            <p>Pobrane obiekty : {data.length}</p>
         </div>
     )
         ;
@@ -33,4 +34,4 @@ const GetAnalogoweAll = (props: AppProps) => {
 interface AppProps {
 }
 
-export default GetAnalogoweAll;
+export default MySQL7_2_1;

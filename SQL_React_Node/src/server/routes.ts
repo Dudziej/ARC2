@@ -4,54 +4,121 @@ import DB from './db'
 
 const router = express.Router();
 
-router.get('/api/allData', async (req, res) => {
+router.get('/MySQL/1_1_1', async (req, res) => {
     try {
-        let data = await DB.Data.all();
+        let data = await DB.Data.MySQL1_1_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-
-router.get('/api/analogowe', async (req, res) => {
+router.get('/MySQL/1_2_1', async (req, res) => {
     try {
-        let data = await DB.Data.analogowe();
+        let data = await DB.Data.MySQL1_2_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-
-router.get('/api/wodoszczelne200m', async (req, res) => {
+router.get('/MySQL/2_1_1', async (req, res) => {
     try {
-        let data = await DB.Data.wodoszczelność();
+        let data = await DB.Data.MySQL2_1_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-
-router.get('/api/producentLorus', async (req, res) => {
+router.get('/MySQL/2_2_1', async (req, res) => {
     try {
-        let data = await DB.Data.producent();
+        let data = await DB.Data.MySQL2_2_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-
-router.get('/api/krajProducentaIstnieje', async (req, res) => {
+router.get('/MySQL/2_3_1', async (req, res) => {
     try {
-        let data = await DB.Data.kraj_producenta();
+        let data = await DB.Data.MySQL2_3_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-
-router.get('/api/idParzyste', async (req, res) => {
+router.get('/MySQL/3_1_1', async (req, res) => {
     try {
-        let data = await DB.Data.id_parzyste();
+        let data = await DB.Data.MySQL3_1_1();
+        res.json(data)
+    } catch(e) {
+        res.sendStatus(500);
+    }
+});
+router.get('/MySQL/3_2_1', async (req, res) => {
+    try {
+        let data = await DB.Data.MySQL3_2_1();
+        res.json(data)
+    } catch(e) {
+        res.sendStatus(500);
+    }
+});
+router.get('/MySQL/4_1_1', async (req, res) => {
+    try {
+        let data = await DB.Data.MySQL4_1_1();
+        res.json(data)
+    } catch(e) {
+        res.sendStatus(500);
+    }
+});
+router.get('/MySQL/4_2_1', async (req, res) => {
+    try {
+        let data = await DB.Data.MySQL4_2_1();
+        res.json(data)
+    } catch(e) {
+        res.sendStatus(500);
+    }
+});
+router.get('/MySQL/5_1_1', async (req, res) => {
+    try {
+        let data = await DB.Data.MySQL5_1_1();
+        res.json(data)
+    } catch(e) {
+        res.sendStatus(500);
+    }
+});
+router.get('/MySQL/5_2_1', async (req, res) => {
+    try {
+        let data = await DB.Data.MySQL5_2_1();
+        res.json(data)
+    } catch(e) {
+        res.sendStatus(500);
+    }
+});
+router.get('/MySQL/6_1_1', async (req, res) => {
+    try {
+        let data = await DB.Data.MySQL6_1_1();
+        res.json(data)
+    } catch(e) {
+        res.sendStatus(500);
+    }
+});
+router.get('/MySQL/6_2_1', async (req, res) => {
+    try {
+        let data = await DB.Data.MySQL6_2_1();
+        res.json(data)
+    } catch(e) {
+        res.sendStatus(500);
+    }
+});
+router.get('/MySQL/7_1_1', async (req, res) => {
+    try {
+        let data = await DB.Data.MySQL7_1_1();
+        res.json(data)
+    } catch(e) {
+        res.sendStatus(500);
+    }
+});
+router.get('/MySQL/7_2_1', async (req, res) => {
+    try {
+        let data = await DB.Data.MySQL7_2_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);

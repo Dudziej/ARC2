@@ -1,18 +1,18 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
 
-const IdParzyste = (props: AppProps) => {
+const MySQL6_2_1 = (props: AppProps) => {
 
-    const [allIdParzyste, setAllIdParzyste] = useState([]);
+    const [data, setData] = useState([]);
     const [exTime, setExTime] = useState(0);
 
     async function getData() {
         try {
             let start = Date.now();
-            const res = await fetch('/api/idParzyste');
+            const res = await fetch('/MySQL/6_2_1');
             const data = await res.json();
             let end = Date.now();
-            setAllIdParzyste(data);
+            setData(data);
             setExTime(end - start)
         } catch (error) {
             console.log(error);
@@ -20,16 +20,18 @@ const IdParzyste = (props: AppProps) => {
     }
 
     return (
-        <div className='getAll'>
+        <div className='MySQL'>
             <button className="btn btn-primary" onClick={getData}>
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
+            <p>Pobrane obiekty : {data.length}</p>
         </div>
-    );
+    )
+        ;
 };
 
 interface AppProps {
 }
 
-export default IdParzyste;
+export default MySQL6_2_1;
