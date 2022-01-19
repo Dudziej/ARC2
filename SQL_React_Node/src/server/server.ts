@@ -10,7 +10,7 @@ var MongoClient = require('mongodb').MongoClient
 
 const uri ="mongodb://127.0.0.1:27017";
 
-app.get('/mongo/1_1_1', function (req, res) {
+app.get('/mongo/1_1_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -21,7 +21,7 @@ app.get('/mongo/1_1_1', function (req, res) {
     })
 })
 
-app.get('/mongo/1_2_1', function (req, res) {
+app.get('/mongo/1_2_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -189,6 +189,22 @@ app.get('/mongo/2_1_1', function (req, res) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
+        db.collection('wzor').find({text: 'logo'}).toArray(function (err, result: any) {
+            if (err) throw err
+            const wzorId = result[0].id
+            db.collection('zegarek').find({wzor: wzorId}).toArray(function (err, result2: any) {
+                if (err) throw err
+                res.sendStatus(200)
+
+            })
+        })
+    })
+})
+
+app.get('/mongo/2_2_1', function (req, res:any) {
+    MongoClient.connect(uri, function (err, client) {
+        if (err) throw err
+        var db = client.db('arc')
         db.collection('zegarek').aggregate([
             {$lookup:
                     {
@@ -199,68 +215,26 @@ app.get('/mongo/2_1_1', function (req, res) {
                     }
             },
             {$match: {'wzor.text': 'logo'}}
-        ]).toArray(function (err, result) {
+        ]).toArray(function (err, result:any) {
             if (err) throw err
             res.sendStatus(200)
         })
     })
 })
-//TODO
-app.get('/mongo/2_1_2', function (req, res) {
-    MongoClient.connect(uri, function (err, client) {
-        if (err) throw err
-        var db = client.db('arc')
-        db.collection('zegarek').aggregate([
-            {$lookup:
-                    {
-                        from: 'wzor',
-                        localField: 'wzor',
-                        foreignField: 'id',
-                        as:'wzor'
-                    }
-            },
-            {$match: {'wzor.text': 'logo'}}
-        ]).toArray(function (err, result) {
-            if (err) throw err
-            res.send(JSON.stringify(result))
-        })
-    })
-})
-//TODO
-app.get('/mongo/2_2_1', function (req, res) {
-    MongoClient.connect(uri, function (err, client) {
-        if (err) throw err
-        var db = client.db('arc')
-        db.collection('zegarek').aggregate([
-            {$lookup:
-                    {
-                        from: 'wzor',
-                        localField: 'wzor',
-                        foreignField: 'id',
-                        as:'wzor'
-                    }
-            },
-            {$match: {'wzor.text': 'logo'}}
-        ]).toArray(function (err, result) {
-            if (err) throw err
-            res.send(JSON.stringify(result))
-        })
-    })
-})
 
-app.get('/mongo/2_3_1', function (req, res) {
+app.get('/mongo/2_3_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
         var query = {wzor: 'logo'}
-        db.collection('zegarekone').find(query).toArray(function (err, result) {
+        db.collection('zegarekone').find(query).toArray(function (err, result:any) {
             if (err) throw err
             res.sendStatus(200)
         })
     })
 })
 
-app.get('/mongo/3_1_1', function (req, res) {
+app.get('/mongo/3_1_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -274,14 +248,14 @@ app.get('/mongo/3_1_1', function (req, res) {
                     }
             },
             {$group : {_id : "$wzor"}},
-        ]).toArray(function (err, result) {
+        ]).toArray(function (err, result:any) {
             if (err) throw err
             res.sendStatus(200)
         })
     })
 })
 
-app.get('/mongo/3_2_1', function (req, res) {
+app.get('/mongo/3_2_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -292,7 +266,7 @@ app.get('/mongo/3_2_1', function (req, res) {
     })
 })
 //TODO
-app.get('/mongo/4_1_1', function (req, res) {
+app.get('/mongo/4_1_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -322,14 +296,14 @@ app.get('/mongo/4_1_1', function (req, res) {
 
                     }}
 
-        ]).toArray(function (err, result) {
+        ]).toArray(function (err, result:any) {
             if (err) throw err
             res.sendStatus(200)
         })
     })
 })
 
-app.get('/mongo/4_2_1', function (req, res) {
+app.get('/mongo/4_2_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -339,14 +313,14 @@ app.get('/mongo/4_2_1', function (req, res) {
                 {$or: [{kolor:'czarny'}, {kolor:'czarne'}]}
             ]
         }
-        db.collection('zegarekone').find(query).toArray(function (err, result) {
+        db.collection('zegarekone').find(query).toArray(function (err, result:any) {
             if (err) throw err
             res.sendStatus(200)
         })
     })
 })
 //TODO
-app.get('/mongo/5_1_1', function (req, res) {
+app.get('/mongo/5_1_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -376,14 +350,14 @@ app.get('/mongo/5_1_1', function (req, res) {
 
             }}
 
-        ]).toArray(function (err, result) {
+        ]).toArray(function (err, result:any) {
             if (err) throw err
             res.sendStatus(200)
         })
     })
 })
 
-app.get('/mongo/5_2_1', function (req, res) {
+app.get('/mongo/5_2_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -393,14 +367,14 @@ app.get('/mongo/5_2_1', function (req, res) {
                 {kolor: { $ne :'czarny'}}
             ]
         }
-        db.collection('zegarekone').find(query).toArray(function (err, result) {
+        db.collection('zegarekone').find(query).toArray(function (err, result:any) {
             if (err) throw err
             res.sendStatus(200)
         })
     })
 })
 
-app.get('/mongo/6_1_1', function (req, res) {
+app.get('/mongo/6_1_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -414,25 +388,25 @@ app.get('/mongo/6_1_1', function (req, res) {
                     }
             },
             {$sort: {'kolor.text': 1}}
-        ]).toArray(function (err, result) {
+        ]).toArray(function (err, result:any) {
             if (err) throw err
-            res.send(JSON.stringify(result))
+            res.sendStatus(200)
         })
     })
 })
 
-app.get('/mongo/6_2_1', function (req, res) {
+app.get('/mongo/6_2_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        db.collection('zegarekone').find({ "kolor": { "$exists": true } }).sort({'kolor': 1}).limit(10000).toArray(function (err, result) {
+        db.collection('zegarekone').find({ "kolor": { "$exists": true } }).sort({'kolor': 1}).toArray(function (err, result) {
             if (err) throw err
             res.send(JSON.stringify(result))
         })
     })
 })
 
-app.get('/mongo/7_1_1', function (req, res) {
+app.get('/mongo/7_1_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
@@ -454,12 +428,12 @@ app.get('/mongo/7_1_1', function (req, res) {
     })
 })
 
-app.get('/mongo/7_2_1', function (req, res) {
+app.get('/mongo/7_2_1', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
         var query = {kolor: /^cz/}
-        db.collection('zegarekone').find(query).toArray(function (err, result) {
+        db.collection('zegarekone').find(query).toArray(function (err, result:any) {
             if (err) throw err
             res.sendStatus(200)
         })
