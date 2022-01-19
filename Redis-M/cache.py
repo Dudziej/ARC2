@@ -4,7 +4,7 @@ from datetime import datetime
 
 r = redis.StrictRedis(host='localhost', port=6379, db=0)
 
-with open('../Scrapper/data.json') as json_file:
+with open('../Scrapper/data_faker.json') as json_file:
     data = json.load(json_file)
     for obj in data:
         jako_string = json.dumps(obj)
