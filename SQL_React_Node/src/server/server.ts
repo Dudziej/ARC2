@@ -184,7 +184,7 @@ app.get('/mongo/6_1_1', function (req, res) {
             {$sort: {'kolor.text': 1}}
         ]).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
@@ -195,7 +195,7 @@ app.get('/mongo/6_2_1', function (req, res) {
         var db = client.db('arc')
         db.collection('zegarekone').find({ "kolor": { "$exists": true } }).sort({'kolor': 1}).limit(10000).toArray(function (err, result) {
             if (err) throw err
-            res.sendStatus(200)
+            res.send(JSON.stringify(result))
         })
     })
 })
