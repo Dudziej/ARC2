@@ -22,4 +22,3 @@ time_start = datetime.utcnow()
 print(json.loads(r.get('43437460').decode('utf-8')))
 time_stop = datetime.utcnow()
 print('%.15f' % (time_stop - time_start).microseconds)
-
