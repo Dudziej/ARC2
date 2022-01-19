@@ -4,8 +4,10 @@ from django.db.models import Q
 from django.http import HttpResponse
 from database.utilis import load_data, init_data, generate_jsons, init_data_one
 from database.models import ZegarekOne, Wzor, Zegarek
+from rest_framework.decorators import api_view
 
 
+@api_view(['GET'])
 def fill_database(request):
     data = load_data('../Scrapper/data_faker.json')
     data_len = len(data)
@@ -13,6 +15,7 @@ def fill_database(request):
     return HttpResponse(f"Added {data_len} records")
 
 
+@api_view(['GET'])
 def fill_database_one(reqest):
     data = load_data('../Scrapper/data_faker.json')
     data_len = len(data)
@@ -25,6 +28,7 @@ def get_jsons(request):
     return HttpResponse("Done")
 
 
+@api_view(['GET'])
 def r_1_1_1(request):
     result = ZegarekOne.objects.all()
     list(result)
