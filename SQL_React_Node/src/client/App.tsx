@@ -33,6 +33,7 @@ const App = (props: AppProps) => {
 	return (
 		<main className="container my-5">
 			<h1 className="text-primary text-center">Benchmark Baz Danych!</h1>
+			<h2 className="text-primary text-center">SQL vs NOSQL vs SQL + ORM</h2>
 			<div className="row justify-content-center mt-4 mb-4">
 				<div className="col-sm-4 border rounded shadow text-primary text-center">
 					<h3 className="mt-2 mb-2">Specyfikacja Komputera</h3>
@@ -73,7 +74,6 @@ const App = (props: AppProps) => {
 
 				</div>
 			</div>
-			<h2 className="text-primary text-center">SQL vs NOSQL vs SQL + ORM</h2>
 			<div className='row justify-content-center'>
 				{/*-------------------1-1-1---------------------------*/}
 				<hr className="mt-4"/>
@@ -318,7 +318,7 @@ const App = (props: AppProps) => {
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
-					<p>MongoDB</p>
+					<p>MongoDB - limit do 10 000</p>
 					<MongoGet6_2_1/>
 				</div>
 
