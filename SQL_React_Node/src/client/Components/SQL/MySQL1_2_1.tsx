@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 
 const MySQL1_2_1 = (props: AppProps) => {
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(0);
     const [exTime, setExTime] = useState(0);
 
     async function getData() {
@@ -25,7 +25,6 @@ const MySQL1_2_1 = (props: AppProps) => {
                 Pobierz wszystko
             </button>
             <p>Czas wykonania : {exTime} Millisekund</p>
-            <p>Pobrane obiekty : {data.length}</p>
         </div>
     )
         ;
