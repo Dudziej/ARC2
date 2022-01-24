@@ -35,6 +35,12 @@ def r_1_1_1(request):
     return HttpResponse("OK")
 
 
+def r_1_2_1(request):
+    result = Zegarek.objects.all()
+    list(result)
+    return HttpResponse("OK")
+
+
 def r_2_1_1(request):
     wzory = Wzor.objects.filter(text__exact='logo')
     result = Zegarek.objects.filter(wzor__in=wzory)

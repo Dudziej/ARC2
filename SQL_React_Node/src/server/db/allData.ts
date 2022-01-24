@@ -7,7 +7,7 @@ export const MySQL1_1_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -19,7 +19,7 @@ export const MySQL1_2_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -31,7 +31,12 @@ export const MySQL2_1_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            con.query("SELECT id FROM Zegarek WHERE wzor LIKE " + results[0].id, (err, results2) => {
+                if(err) {
+                    return reject(err);
+                }
+                resolve(200);
+            });
         });
     });
 }
@@ -43,7 +48,7 @@ export const MySQL2_2_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -55,7 +60,7 @@ export const MySQL2_3_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -67,7 +72,7 @@ export const MySQL3_1_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -79,7 +84,7 @@ export const MySQL3_2_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -91,7 +96,7 @@ export const MySQL4_1_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -103,7 +108,7 @@ export const MySQL4_2_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -115,7 +120,7 @@ export const MySQL5_1_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -127,7 +132,7 @@ export const MySQL5_2_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -135,11 +140,11 @@ export const MySQL5_2_1 = async () => {
 export const MySQL6_1_1 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT DISTINCT * from Zegarek INNER JOIN Styl ON Zegarek.styl=Styl.id AND Styl.text LIKE 'klasyczne' INNER JOIN Rodzaj ON Zegarek.rodzaj=Rodzaj.id AND Rodzaj.text LIKE 'analogowe' INNER JOIN Mechanizm ON Zegarek.mechanizm=Mechanizm.id AND Mechanizm.text LIKE 'kwarcowy' INNER JOIN KrajProducenta ON Zegarek.kraj_producenta=KrajProducenta.id AND KrajProducenta.text LIKE 'wlochy' INNER JOIN Kolor ON Zegarek.kolor=Kolor.id ORDER BY Kolor.text ASC", (err, results) => {
+        con.query("SELECT DISTINCT * from Zegarek INNER JOIN Kolor ON Zegarek.kolor=Kolor.id ORDER BY Kolor.text ASC", (err, results) => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -147,11 +152,11 @@ export const MySQL6_1_1 = async () => {
 export const MySQL6_2_1 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT * from data_faker WHERE styl LIKE 'klasyczne' AND rodzaj LIKE 'analogowe' AND mechanizm LIKE 'kwarcowy' AND kraj_producenta LIKE 'wlochy' ORDER BY kolor ASC", (err, results) => {
+        con.query("SELECT * from data_faker ORDER BY kolor ASC", (err, results) => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -163,7 +168,7 @@ export const MySQL7_1_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
@@ -175,7 +180,7 @@ export const MySQL7_2_1 = async () => {
             if(err) {
                 return reject(err);
             }
-            resolve(results);
+            resolve(200);
         });
     });
 }
