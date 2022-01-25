@@ -10,8 +10,8 @@ def load_data():
         return json.load(json_file)
 
 
-def save_data(data):
-    with open('data_faker.json', 'w+', encoding='utf-8') as outfile:
+def save_data(data, count=0):
+    with open(f"data_faker.json", 'w+', encoding='utf-8') as outfile:
         json.dump(data, outfile, ensure_ascii=False)
 
 
@@ -64,8 +64,8 @@ def generate_products(count):
     data_aggregated = get_data_aggregated(data, keys)
     providers = get_providers(data_aggregated)
     products = get_fake_products(providers, count)
-    save_data(products)
+    save_data(products, count)
 
 
 if __name__ == '__main__':
-    generate_products(count=100000)
+    products = generate_products(count=100_000)
