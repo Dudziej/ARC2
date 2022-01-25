@@ -5,8 +5,8 @@ import MongoGetA_40_1 from "./Components/NoSQL/MongoGetA_40_1";
 import MongoGetDN_1_1 from "./Components/NoSQL/MongoGetDN_1_1";
 import MongoGetDN_10_1 from "./Components/NoSQL/MongoGetDN_10_1";
 import MongoGetDN_100_1 from "./Components/NoSQL/MongoGetDN_100_1";
-import MongoGet3_2_1 from "./Components/NoSQL/MongoGet3_2_1";
-import MongoGet4_1_1 from "./Components/NoSQL/MongoGet4_1_1";
+import MongoGetA_20_2 from "./Components/NoSQL/MongoGetA_20_2";
+import MongoGetDN_100_2 from "./Components/NoSQL/MongoGetDN_100_2";
 import MongoGet4_2_1 from "./Components/NoSQL/MongoGet4_2_1";
 import MongoGet5_1_1 from "./Components/NoSQL/MongoGet5_1_1";
 import MongoGet5_2_1 from "./Components/NoSQL/MongoGet5_2_1";
@@ -220,7 +220,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MongoDB</p>
-					<MongoGet3_2_1/>
+					<MongoGetA_20_2/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -239,7 +239,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MongoDB</p>
-					<MongoGet4_1_1/>
+					<MongoGetDN_100_2/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
