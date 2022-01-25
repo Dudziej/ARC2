@@ -1,14 +1,14 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
 
-const MongoGet2_3_1 = (props: AppProps) => {
+const MongoGetDN_10_1 = (props: AppProps) => {
 
     const [exTime, setExTime] = useState(0);
 
     async function getData() {
         try {
             let start = Date.now();
-            const res = await fetch('/mongo/2_3_1');
+            const res = await fetch('/mongo/DN_10_1');
             const data = await res.status===200;
             let end = Date.now();
             setExTime(end - start)
@@ -31,4 +31,4 @@ const MongoGet2_3_1 = (props: AppProps) => {
 interface AppProps {
 }
 
-export default MongoGet2_3_1;
+export default MongoGetDN_10_1;
