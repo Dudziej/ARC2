@@ -288,7 +288,7 @@ def generate_json(model_instance):
 
     serialized_json = json.loads(serialized)
     result = []
-    for i, x in serialized_json:
+    for x in serialized_json:
         dict_instance = x['fields']
         dict_instance['id'] = x['pk']
         result.append(dict_instance)
@@ -319,6 +319,7 @@ def create_zegarek_DN(Instance, e):
     zegarek.wzor = e['wzor']
     zegarek.linia_zegarkow = e['linia_zegarkow']
     zegarek.zapiecie = e['zapiecie']
+    zegarek.save()
 
 # def init_data_one(data, data_len):
 #     for i, e in enumerate(data):
