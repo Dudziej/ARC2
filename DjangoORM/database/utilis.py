@@ -1,8 +1,9 @@
 import json
 
 from database.models import Producent, Typ, Rodzaj, Wodoszczelnosc, Kolor, RodzajPaska, KsztaltKoperty, \
-    Mechanizm, Zapiecie, Zegarek, MaterialKoperty, RodzajSzkla, Gwarancja, CechyDodatkowe, Funkcje, Styl, Popularne, \
-    KrajProducenta, Wzor, LiniaZegarkow, ZegarekOne
+    Mechanizm, Zapiecie, Zegarek_DN_10, Zegarek_DN_1, Zegarek_DN_100, MaterialKoperty, RodzajSzkla, Gwarancja, \
+    CechyDodatkowe, Funkcje, Styl, Popularne, \
+    KrajProducenta, Wzor, LiniaZegarkow, Zegarek_A_10, Zegarek_A_20, Zegarek_A_40
 from django.db import transaction
 from django.core import serializers
 from pathlib import Path
@@ -22,8 +23,12 @@ def save_data(data, filename):
 @transaction.atomic
 def init_data(data, data_len):
     for i, e in enumerate(data):
-        print(f"Processing data: {i + 1}/{data_len}")
-        create_zegarek(e)
+        print(f"Zegarki DN: {i + 1}/{data_len}")
+        create_zegarek_DN(Zegarek_DN_100, e)
+        if i < 10_000:
+            create_zegarek_DN(Zegarek_DN_10, e)
+        if i < 1_000:
+            create_zegarek_DN(Zegarek_DN_1, e)
 
 
 def create_zegarek(e):
@@ -118,9 +123,9 @@ def create_zegarek(e):
 
 
 def generate_jsons():
-    instances = [Zegarek, Producent, Typ, Rodzaj, Wodoszczelnosc, Kolor, RodzajPaska, KsztaltKoperty, Mechanizm,
-                 Zapiecie, MaterialKoperty, RodzajSzkla, Gwarancja, CechyDodatkowe, Funkcje, Styl, Popularne,
-                 KrajProducenta, Wzor, LiniaZegarkow]
+    instances = [Zegarek_DN_1, Zegarek_DN_10, Zegarek_DN_100, Zegarek_A_10, Zegarek_A_20, Zegarek_A_40, Producent, Typ,
+                 Rodzaj, Wodoszczelnosc, Kolor, RodzajPaska, KsztaltKoperty, Mechanizm, Zapiecie, MaterialKoperty,
+                 RodzajSzkla, Gwarancja, CechyDodatkowe, Funkcje, Styl, Popularne, KrajProducenta, Wzor, LiniaZegarkow]
     for instance in instances:
         generate_json(instance)
 
@@ -138,8 +143,8 @@ def generate_json(model_instance):
     save_data(result, model_instance.__name__)
 
 
-def create_zegarekONE(e):
-    zegarek, _ = ZegarekOne.objects.get_or_create(id=e['id'])
+def create_zegarek_DN(Instance, e):
+    zegarek, _ = Instance.objects.get_or_create(id=e['id'])
     zegarek.producent = e['producent']
     zegarek.typ = e['typ']
     zegarek.rodzaj = e['rodzaj']
@@ -168,5 +173,3 @@ def init_data_one(data, data_len):
     for i, e in enumerate(data):
         print(f"Processing data: {i + 1}/{data_len}")
         create_zegarekONE(e)
-
-
