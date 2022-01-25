@@ -2,7 +2,7 @@ import json
 
 from django.db.models import Q
 from django.http import HttpResponse
-from database.utilis import load_data, init_data, generate_jsons, init_data_one
+from database.utilis import load_data, init_data, generate_jsons
 # from database.models import ZegarekOne, Wzor, Zegarek
 from rest_framework.decorators import api_view
 
@@ -13,14 +13,6 @@ def fill_database(request):
     data_len = len(data)
     init_data(data, data_len)
     return HttpResponse(f"Added {data_len} records")
-
-
-@api_view(['GET'])
-def fill_database_one(reqest):
-    data = load_data('../Scrapper/data_faker.json')
-    data_len = len(data)
-    init_data_one(data, data_len)
-    return HttpResponse("Done")
 
 
 def get_jsons(request):

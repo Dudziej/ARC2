@@ -124,8 +124,7 @@ class Zegarek_A_40(models.Model):
     kolor = models.ForeignKey(Kolor, on_delete=models.CASCADE, null=True, default=None)
     rodzaj_paska = models.ForeignKey(RodzajPaska, on_delete=models.CASCADE, null=True, default=None)
     ksztalt_koperty = models.ForeignKey(KsztaltKoperty, on_delete=models.CASCADE, null=True, default=None)
-    kolor_tarczy = models.ForeignKey(Kolor, on_delete=models.CASCADE, null=True, default=None,
-                                     related_name='kolor_tarczy2')
+    kolor_tarczy = models.ForeignKey(Kolor, on_delete=models.CASCADE, null=True, default=None,related_name='kolor_tarczy2')
     mechanizm = models.ForeignKey(Mechanizm, on_delete=models.CASCADE, null=True, default=None)
     zapiecie = models.ForeignKey(Zapiecie, on_delete=models.CASCADE, null=True, default=None)
     material_koperty = models.ForeignKey(MaterialKoperty, on_delete=models.CASCADE, null=True, default=None)
@@ -133,13 +132,11 @@ class Zegarek_A_40(models.Model):
     gwarancja = models.ForeignKey(Gwarancja, on_delete=models.CASCADE, null=True, default=None)
     cechy_dodatkowe = models.ForeignKey(CechyDodatkowe, on_delete=models.CASCADE, null=True, default=None)
     funkcje = models.ForeignKey(Funkcje, on_delete=models.CASCADE, null=True, default=None)
-    kolor_paska = models.ForeignKey(Kolor, on_delete=models.CASCADE, null=True, default=None,
-                                    related_name='kolor_paska2')
+    kolor_paska = models.ForeignKey(Kolor, on_delete=models.CASCADE, null=True, default=None,related_name='kolor_paska2')
     styl = models.ForeignKey(Styl, on_delete=models.CASCADE, null=True, default=None)
     popularne = models.ForeignKey(Popularne, on_delete=models.CASCADE, null=True, default=None)
     kraj_producenta = models.ForeignKey(KrajProducenta, on_delete=models.CASCADE, null=True, default=None)
     wzor = models.ForeignKey(Wzor, on_delete=models.CASCADE, null=True, default=None)
-
     producent2 = models.ForeignKey(Producent, on_delete=models.CASCADE, null=True, default=None, related_name='i')
     typ2 = models.ForeignKey(Typ, on_delete=models.CASCADE, null=True, default=None, related_name='j')
     rodzaj2 = models.ForeignKey(Rodzaj, on_delete=models.CASCADE, null=True, default=None, related_name='k')
@@ -147,8 +144,7 @@ class Zegarek_A_40(models.Model):
     kolor2 = models.ForeignKey(Kolor, on_delete=models.CASCADE, null=True, default=None, related_name='m')
     rodzaj_paska2 = models.ForeignKey(RodzajPaska, on_delete=models.CASCADE, null=True, default=None, related_name='n')
     ksztalt_koperty2 = models.ForeignKey(KsztaltKoperty, on_delete=models.CASCADE, null=True, default=None, related_name='o')
-    kolor_tarczy2 = models.ForeignKey(Kolor, on_delete=models.CASCADE, null=True, default=None,
-                                      related_name='r')
+    kolor_tarczy2 = models.ForeignKey(Kolor, on_delete=models.CASCADE, null=True, default=None,related_name='r')
     mechanizm2 = models.ForeignKey(Mechanizm, on_delete=models.CASCADE, null=True, default=None, related_name='p')
     zapiecie2 = models.ForeignKey(Zapiecie, on_delete=models.CASCADE, null=True, default=None, related_name='zapiecie2')
     material_koperty2 = models.ForeignKey(MaterialKoperty, on_delete=models.CASCADE, null=True, default=None, related_name='material2')
@@ -156,8 +152,7 @@ class Zegarek_A_40(models.Model):
     gwarancja2 = models.ForeignKey(Gwarancja, on_delete=models.CASCADE, null=True, default=None, related_name='b')
     cechy_dodatkowe2 = models.ForeignKey(CechyDodatkowe, on_delete=models.CASCADE, null=True, default=None, related_name='c')
     funkcje2 = models.ForeignKey(Funkcje, on_delete=models.CASCADE, null=True, default=None, related_name='d')
-    kolor_paska2 = models.ForeignKey(Kolor, on_delete=models.CASCADE, null=True, default=None,
-                                     related_name='s')
+    kolor_paska2 = models.ForeignKey(Kolor, on_delete=models.CASCADE, null=True, default=None,related_name='s')
     styl2 = models.ForeignKey(Styl, on_delete=models.CASCADE, null=True, default=None, related_name='e')
     popularne2 = models.ForeignKey(Popularne, on_delete=models.CASCADE, null=True, default=None, related_name='f')
     kraj_producenta2 = models.ForeignKey(KrajProducenta, on_delete=models.CASCADE, null=True, default=None, related_name='g')
