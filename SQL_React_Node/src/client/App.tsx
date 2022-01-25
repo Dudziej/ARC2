@@ -13,7 +13,7 @@ import MongoGetA_20_4 from "./Components/NoSQL/MongoGetA_20_4";
 import MongoGetDN_100_4 from "./Components/NoSQL/MongoGetDN_100_4";
 import MongoGetA_20_5 from "./Components/NoSQL/MongoGetA_20_5";
 import MongoGetDN_100_5 from "./Components/NoSQL/MongoGetDN_100_5";
-import OrmGet1_1_1 from "./Components/ORM/OrmGet1_1_1";
+import OrmGetA_10_1 from "./Components/ORM/OrmGetA_10_1";
 import MongoGetA_20_1 from "./Components/NoSQL/MongoGetA_20_1";
 import MySQL1_1_1 from "./Components/SQL/MySQL1_1_1";
 import MySQL1_2_1 from "./Components/SQL/MySQL1_2_1";
@@ -29,19 +29,19 @@ import MySQL5_2_1 from "./Components/SQL/MySQL5_2_1";
 import MySQL6_1_1 from "./Components/SQL/MySQL6_1_1";
 import MySQL6_2_1 from "./Components/SQL/MySQL6_2_1";
 import MySQL7_1_1 from "./Components/SQL/MySQL7_1_1";
-import OrmGet1_2_1 from "./Components/ORM/OrmGet1_2_1";
-import OrmGet2_1_1 from "./Components/ORM/OrmGet2_1_1";
-import OrmGet2_2_1 from "./Components/ORM/OrmGet2_2_1";
-import OrmGet2_3_1 from "./Components/ORM/OrmGet2_3_1";
-import OrmGet3_1_1 from "./Components/ORM/OrmGet3_1_1";
-import OrmGet3_2_1 from "./Components/ORM/OrmGet3_2_1";
-import OrmGet4_1_1 from "./Components/ORM/OrmGet4_1_1";
-import OrmGet4_2_1 from "./Components/ORM/OrmGet4_2_1";
-import OrmGet5_1_1 from "./Components/ORM/OrmGet5_1_1";
-import OrmGet5_2_1 from "./Components/ORM/OrmGet5_2_1";
-import OrmGet6_1_1 from "./Components/ORM/OrmGet6_1_1";
-import OrmGet6_2_1 from "./Components/ORM/OrmGet6_2_1";
-import OrmGet7_1_1 from "./Components/ORM/OrmGet7_1_1";
+import OrmGetA_20_1 from "./Components/ORM/OrmGetA_20_1";
+import OrmGetA_40_1 from "./Components/ORM/OrmGetA_40_1";
+import OrmGetDN_100_1 from "./Components/ORM/OrmGetDN_100_1";
+import OrmGetDN_10_1 from "./Components/ORM/OrmGetDN_10_1";
+import OrmGetDN_1_1 from "./Components/ORM/OrmGetDN_1_1";
+import OrmGetA_20_2 from "./Components/ORM/OrmGetA_20_2";
+import OrmGetDN_100_2 from "./Components/ORM/OrmGetDN_100_2";
+import OrmGetA_20_3 from "./Components/ORM/OrmGetA_20_3";
+import OrmGetDN_100_3 from "./Components/ORM/OrmGetDN_100_3";
+import OrmGetA_20_4 from "./Components/ORM/OrmGetA_20_4";
+import OrmGetDN_100_4 from "./Components/ORM/OrmGetDN_100_4";
+import OrmGetA_20_5 from "./Components/ORM/OrmGetA_20_5";
+import OrmGetDN_100_5 from "./Components/ORM/OrmGetDN_100_5";
 
 const App = (props: AppProps) => {
 
@@ -111,7 +111,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet1_1_1/>
+					<OrmGetA_10_1/>
 				</div>
 				{/*-------------------A_20_1---------------------------*/}
 				<hr className="mt-4"/>
@@ -129,7 +129,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet1_2_1/>
+					<OrmGetA_20_1/>
 				</div>
 				{/*----------------A_40_1----------------------------*/}
 				<hr className="mt-4"/>
@@ -148,7 +148,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet2_1_1/>
+					<OrmGetA_40_1/>
 				</div>
 				{/*----------------DN_1_1------------------------------*/}
 				<hr className="mt-4"/>
@@ -166,7 +166,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet2_2_1/>
+					<OrmGetDN_100_1/>
 				</div>
 				{/*------------------DN_10_1------------------------------*/}
 				<hr className="mt-4"/>
@@ -184,7 +184,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet2_3_1/>
+					<OrmGetDN_10_1/>
 				</div>
 				{/*----------------DN_100_1---------------------------------*/}
 				<hr className="mt-4"/>
@@ -203,7 +203,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet3_1_1/>
+					<OrmGetDN_1_1/>
 				</div>
 				{/*-------------------A_20_2------------------------------*/}
 				<hr className="mt-4"/>
@@ -221,7 +221,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet3_2_1/>
+					<OrmGetA_20_2/>
 				</div>
 				{/*--------------------DN_100_2-----------------------------*/}
 				<hr className="mt-4"/>
@@ -240,7 +240,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet4_1_1/>
+					<OrmGetDN_100_2/>
 				</div>
 				{/*---------------------A_20_3----------------------------*/}
 				<hr className="mt-4"/>
@@ -258,7 +258,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet4_2_1/>
+					<OrmGetA_20_3/>
 				</div>
 				{/*-------------------DN_100_3------------------------------*/}
 				<hr className="mt-4"/>
@@ -277,7 +277,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet5_1_1/>
+					<OrmGetDN_100_3/>
 				</div>
 				{/*--------------------A_20_4-----------------------------*/}
 				<hr className="mt-4"/>
@@ -295,7 +295,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet5_2_1/>
+					<OrmGetA_20_4/>
 				</div>
 				{/*------------------DN_100_4-------------------------------*/}
 				<hr className="mt-4"/>
@@ -314,7 +314,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet6_1_1/>
+					<OrmGetDN_100_4/>
 				</div>
 				{/*------------------A_20_5------------------------------*/}
 				<hr className="mt-4"/>
@@ -332,7 +332,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet6_2_1/>
+					<OrmGetA_20_5/>
 				</div>
 				{/*------------------DN_100_5-------------------------------*/}
 				<hr className="mt-4"/>
@@ -351,7 +351,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGet7_1_1/>
+					<OrmGetDN_100_5/>
 				</div>
 			</div>
 		</main>
