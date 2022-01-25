@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import MongoGetA_10_1 from "./Components/NoSQL/MongoGetA_10_1";
 import MongoGetA_40_1 from "./Components/NoSQL/MongoGetA_40_1";
-import MongoGet2_2_1 from "./Components/NoSQL/MongoGet2_2_1";
+import MongoGetDN_1_1 from "./Components/NoSQL/MongoGetDN_1_1";
 import MongoGet2_3_1 from "./Components/NoSQL/MongoGet2_3_1";
 import MongoGet3_1_1 from "./Components/NoSQL/MongoGet3_1_1";
 import MongoGet3_2_1 from "./Components/NoSQL/MongoGet3_2_1";
@@ -165,7 +165,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MongoDB</p>
-					<MongoGet2_2_1/>
+					<MongoGetDN_1_1/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
