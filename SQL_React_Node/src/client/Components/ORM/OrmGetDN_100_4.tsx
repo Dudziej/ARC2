@@ -1,14 +1,14 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
 
-const OrmGet6_1_1 = (props: AppProps) => {
+const OrmGetDN_100_4 = (props: AppProps) => {
 
     const [exTime, setExTime] = useState(0);
 
     async function getData() {
         try {
             let start = Date.now();
-            const res = await fetch('http://127.0.0.1:8000/6_1_1');
+            const res = await fetch('http://127.0.0.1:8000/DN_100_4');
             const data = await res.status===200;
             let end = Date.now();
 
@@ -33,4 +33,4 @@ const OrmGet6_1_1 = (props: AppProps) => {
 interface AppProps {
 }
 
-export default OrmGet6_1_1;
+export default OrmGetDN_100_4;
