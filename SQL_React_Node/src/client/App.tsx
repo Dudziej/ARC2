@@ -9,7 +9,7 @@ import MongoGetA_20_2 from "./Components/NoSQL/MongoGetA_20_2";
 import MongoGetDN_100_2 from "./Components/NoSQL/MongoGetDN_100_2";
 import MongoGetA_20_3 from "./Components/NoSQL/MongoGetA_20_3";
 import MongoGetDN_100_3 from "./Components/NoSQL/MongoGetDN_100_3";
-import MongoGet5_2_1 from "./Components/NoSQL/MongoGet5_2_1";
+import MongoGetA_20_4 from "./Components/NoSQL/MongoGetA_20_4";
 import MongoGet6_1_1 from "./Components/NoSQL/MongoGet6_1_1";
 import MongoGet6_2_1 from "./Components/NoSQL/MongoGet6_2_1";
 import MongoGet7_1_1 from "./Components/NoSQL/MongoGet7_1_1";
@@ -294,7 +294,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MongoDB</p>
-					<MongoGet5_2_1/>
+					<MongoGetA_20_4/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
