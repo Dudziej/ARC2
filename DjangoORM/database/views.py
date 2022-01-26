@@ -3,7 +3,7 @@ import json
 from django.db.models import Q
 from django.http import HttpResponse
 from database.utilis import load_data, init_data, generate_jsons
-# from database.models import ZegarekOne, Wzor, Zegarek
+from database.models import Wzor, Zegarek_A_10, Zegarek_A_20, Zegarek_A_40, Zegarek_DN_100, Zegarek_DN_10, Zegarek_DN_1
 from rest_framework.decorators import api_view
 
 
@@ -20,12 +20,96 @@ def get_jsons(request):
     return HttpResponse("Done")
 
 
-# @api_view(['GET'])
-# def r_1_1_1(request):
-#     result = ZegarekOne.objects.all()
-#     list(result)
-#     return HttpResponse("OK")
-#
+@api_view(['GET'])
+def A_10_1(request):
+    result = Zegarek_A_10.objects.all()
+    list(result)
+    return HttpResponse("OK")
+
+
+@api_view(['GET'])
+def A_20_1(request):
+    result = Zegarek_A_20.objects.all()
+    list(result)
+    return HttpResponse("OK")
+
+
+@api_view(['GET'])
+def A_40_1(request):
+    result = Zegarek_A_40.objects.all()
+    list(result)
+    return HttpResponse("OK")
+
+
+@api_view(['GET'])
+def DN_100_1(request):
+    result = Zegarek_DN_100.objects.all()
+    list(result)
+    return HttpResponse("OK")
+
+
+@api_view(['GET'])
+def DN_10_1(request):
+    result = Zegarek_DN_10.objects.all()
+    list(result)
+    return HttpResponse("OK")
+
+
+@api_view(['GET'])
+def DN_1_1(request):
+    result = Zegarek_DN_1.objects.all()
+    list(result)
+    return HttpResponse("OK")
+
+
+def A_20_2(request):
+    result = Zegarek_A_20.objects.filter(kolor__text__startswith="cz")
+    list(result)
+    return HttpResponse("OK")
+
+
+def DN_100_2(request):
+    result = Zegarek_DN_100.objects.filter(kolor__startswith="cz").distinct()
+    list(result)
+    return HttpResponse("OK")
+
+
+def A_20_3(request):
+    result = Zegarek_A_20.objects.all().order_by('kolor__text')
+    list(result)
+    return HttpResponse("OK")
+
+
+def DN_100_3(request):
+    result = Zegarek_DN_100.objects.all().order_by('kolor')
+    list(result)
+    return HttpResponse("OK")
+
+
+def A_20_4(request):
+    result = Wzor.objects.all()
+    list(result)
+    return HttpResponse("OK")
+
+
+def DN_100_4(request):
+    result = Zegarek_DN_100.objects.values_list('wzor', flat=True)
+    set(result)
+    return HttpResponse("OK")
+
+
+def A_20_5(request):
+    result = Zegarek_A_20.objects.filter(
+        Q(wzor__text__exact='logo', kolor__text__exact='czarny') | Q(kolor__text__exact='czarne'))
+    list(result)
+    return HttpResponse("OK")
+
+
+def DN_100_5(request):
+    result = Zegarek_DN_100.objects.filter(Q(wzor__exact='logo', kolor__exact='czarny') | Q(kolor__exact='czarne'))
+    list(result)
+    return HttpResponse("OK")
+
 #
 # def r_1_2_1(request):
 #     result = Zegarek.objects.all()
@@ -58,10 +142,7 @@ def get_jsons(request):
 #     return HttpResponse("OK")
 #
 #
-# def r_3_2_1(request):
-#     result = ZegarekOne.objects.all().distinct('wzor')
-#     list(result)
-#     return HttpResponse("OK")
+
 #
 #
 # def r_4_1_1(request):
