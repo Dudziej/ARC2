@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
 
-const MySQL6_2_1 = (props: AppProps) => {
+const MySQLA_20_5 = (props: AppProps) => {
 
     const [data, setData] = useState(0);
     const [exTime, setExTime] = useState(0);
@@ -9,7 +9,7 @@ const MySQL6_2_1 = (props: AppProps) => {
     async function getData() {
         try {
             let start = Date.now();
-            const res = await fetch('/MySQL/6_2_1');
+            const res = await fetch('/MySQL/A_20_5');
             const data = await res.json();
             let end = Date.now();
             setData(data);
@@ -33,4 +33,4 @@ const MySQL6_2_1 = (props: AppProps) => {
 interface AppProps {
 }
 
-export default MySQL6_2_1;
+export default MySQLA_20_5;

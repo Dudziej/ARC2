@@ -15,20 +15,20 @@ import MongoGetA_20_5 from "./Components/NoSQL/MongoGetA_20_5";
 import MongoGetDN_100_5 from "./Components/NoSQL/MongoGetDN_100_5";
 import OrmGetA_10_1 from "./Components/ORM/OrmGetA_10_1";
 import MongoGetA_20_1 from "./Components/NoSQL/MongoGetA_20_1";
-import MySQL1_1_1 from "./Components/SQL/MySQL1_1_1";
-import MySQL1_2_1 from "./Components/SQL/MySQL1_2_1";
-import MySQL2_1_1 from "./Components/SQL/MySQL2_1_1";
-import MySQL2_2_1 from "./Components/SQL/MySQL2_2_1";
-import MySQL2_3_1 from "./Components/SQL/MySQL2_3_1";
-import MySQL3_1_1 from "./Components/SQL/MySQL3_1_1";
-import MySQL3_2_1 from "./Components/SQL/MySQL3_2_1";
-import MySQL4_1_1 from "./Components/SQL/MySQL4_1_1";
-import MySQL4_2_1 from "./Components/SQL/MySQL4_2_1";
-import MySQL5_1_1 from "./Components/SQL/MySQL5_1_1";
-import MySQL5_2_1 from "./Components/SQL/MySQL5_2_1";
-import MySQL6_1_1 from "./Components/SQL/MySQL6_1_1";
-import MySQL6_2_1 from "./Components/SQL/MySQL6_2_1";
-import MySQL7_1_1 from "./Components/SQL/MySQL7_1_1";
+import MySQLA_10_1 from "./Components/SQL/MySQLA_10_1";
+import MySQLA_20_1 from "./Components/SQL/MySQLA_20_1";
+import MySQLA_40_1 from "./Components/SQL/MySQLA_40_1";
+import MySQLA_20_2 from "./Components/SQL/MySQLA_20_2";
+import MySQLA_20_3 from "./Components/SQL/MySQLA_20_3";
+import MySQLA_20_4 from "./Components/SQL/MySQLA_20_4";
+import MySQLA_20_5 from "./Components/SQL/MySQLA_20_5";
+import MySQLDN_1_1 from "./Components/SQL/MySQLDN_1_1";
+import MySQLDN_10_1 from "./Components/SQL/MySQLDN_10_1";
+import MySQLDN_100_1 from "./Components/SQL/MySQLDN_100_1";
+import MySQLDN_100_2 from "./Components/SQL/MySQLDN_100_2";
+import MySQLDN_100_3 from "./Components/SQL/MySQLDN_100_3";
+import MySQLDN_100_4 from "./Components/SQL/MySQLDN_100_4";
+import MySQLDN_100_5 from "./Components/SQL/MySQLDN_100_5";
 import OrmGetA_20_1 from "./Components/ORM/OrmGetA_20_1";
 import OrmGetA_40_1 from "./Components/ORM/OrmGetA_40_1";
 import OrmGetDN_100_1 from "./Components/ORM/OrmGetDN_100_1";
@@ -101,7 +101,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL1_1_1/>
+					<MySQLA_10_1/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -119,7 +119,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL1_2_1/>
+					<MySQLA_20_1/>
 				</div>
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -138,7 +138,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL2_1_1/>
+					<MySQLA_40_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -156,7 +156,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL2_2_1/>
+					<MySQLDN_1_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -174,7 +174,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL2_3_1/>
+					<MySQLDN_10_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -193,7 +193,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL3_1_1/>
+					<MySQLDN_100_1/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -211,7 +211,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL3_2_1/>
+					<MySQLA_20_2/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -230,7 +230,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL4_1_1/>
+					<MySQLDN_100_2/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -248,7 +248,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL4_2_1/>
+					<MySQLA_20_3/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -267,7 +267,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL5_1_1/>
+					<MySQLDN_100_3/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -285,7 +285,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL5_2_1/>
+					<MySQLA_20_4/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -304,7 +304,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL6_1_1/>
+					<MySQLDN_100_4/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -322,7 +322,7 @@ const App = (props: AppProps) => {
 				<hr className="mb-4"/>
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL6_2_1/>
+					<MySQLA_20_5/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>
@@ -341,7 +341,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>MySQL</p>
-					<MySQL7_1_1/>
+					<MySQLDN_100_5/>
 				</div>
 
 				<div className='col-sm-4 text-center border card shadow mt-1 mb-1 pt-2 pb-2'>

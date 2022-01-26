@@ -1,9 +1,9 @@
 import { con } from './index';
 
-export const MySQL1_1_1 = async () => {
+export const MySQLA_10_1 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT * FROM data_faker", (err, results) => {
+        con.query("SELECT DISTINCT * FROM Zegarek_A_10 LEFT JOIN producent ON Zegarek_A_10.producent=producent.id LEFT JOIN typ ON Zegarek_A_10.typ=typ.id LEFT JOIN rodzaj ON Zegarek_A_10.rodzaj=rodzaj.id LEFT JOIN wodoszczelnosc ON Zegarek_A_10.wodoszczelnosc=wodoszczelnosc.id LEFT JOIN kolor ON Zegarek_A_10.kolor=kolor.id LEFT JOIN rodzajpaska ON Zegarek_A_10.rodzaj_paska=rodzajpaska.id LEFT JOIN ksztaltkoperty ON Zegarek_A_10.ksztalt_koperty=ksztaltkoperty.id LEFT JOIN mechanizm ON Zegarek_A_10.mechanizm=mechanizm.id", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -12,10 +12,10 @@ export const MySQL1_1_1 = async () => {
     });
 }
 
-export const MySQL1_2_1 = async () => {
+export const MySQLA_20_1 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT DISTINCT Zegarek.id AS id, CechyDodatkowe.text AS CechyDodatkowe, Funkcje.text AS Funkcje, Gwarancja.text AS Gwarancja, Kolor.text AS Kolor, KrajProducenta.text AS KrajProducenta, KsztaltKoperty.text AS KsztaltKoperty, LiniaZegarkow.text AS LiniaZegarkow, MaterialKoperty.text AS MaterialKoperty, Mechanizm.text AS Mechanizm, Popularne.text AS Popularne, Producent.text AS Producent, Rodzaj.text AS Rodzaj, RodzajPaska.text AS RodzajPaska, RodzajSzkla.text AS RodzajSzkla, Styl.text AS Styl, Typ.text AS Typ, Wodoszczelnosc.text AS Wodoszczelnosc, Wzor.text AS Wzor, Zapiecie.text AS Zapiecie FROM Zegarek LEFT JOIN CechyDodatkowe ON Zegarek.cechy_dodatkowe=CechyDodatkowe.id LEFT JOIN Funkcje ON Zegarek.funkcje=Funkcje.id LEFT JOIN Gwarancja ON Zegarek.gwarancja=Gwarancja.id LEFT JOIN Kolor ON Zegarek.kolor=Kolor.id LEFT JOIN KrajProducenta ON Zegarek.kraj_producenta=KrajProducenta.id LEFT JOIN KsztaltKoperty ON Zegarek.ksztalt_koperty=KsztaltKoperty.id LEFT JOIN LiniaZegarkow ON Zegarek.linia_zegarkow=LiniaZegarkow.id LEFT JOIN MaterialKoperty ON Zegarek.material_koperty=MaterialKoperty.id LEFT JOIN Mechanizm ON Zegarek.mechanizm=Mechanizm.id LEFT JOIN Popularne ON Zegarek.popularne=Popularne.id LEFT JOIN Producent ON Zegarek.producent=Producent.id LEFT JOIN Rodzaj ON Zegarek.rodzaj=Rodzaj.id LEFT JOIN RodzajPaska ON Zegarek.rodzaj_paska=RodzajPaska.id LEFT JOIN RodzajSzkla ON Zegarek.rodzaj_szkla=RodzajSzkla.id LEFT JOIN Styl ON Zegarek.styl=Styl.id LEFT JOIN Typ ON Zegarek.typ=Typ.id LEFT JOIN Wodoszczelnosc ON Zegarek.wodoszczelnosc=Wodoszczelnosc.id LEFT JOIN Wzor ON Zegarek.wzor=Wzor.id LEFT JOIN Zapiecie ON Zegarek.id=Zapiecie.id", (err, results) => {
+        con.query("SELECT DISTINCT * FROM Zegarek_A_20 LEFT JOIN producent ON Zegarek_A_20.producent=producent.id LEFT JOIN typ ON Zegarek_A_20.typ=typ.id LEFT JOIN rodzaj ON Zegarek_A_20.rodzaj=rodzaj.id LEFT JOIN wodoszczelnosc ON Zegarek_A_20.wodoszczelnosc=wodoszczelnosc.id LEFT JOIN kolor ON Zegarek_A_20.kolor=kolor.id LEFT JOIN rodzajpaska ON Zegarek_A_20.rodzaj_paska=rodzajpaska.id LEFT JOIN ksztaltkoperty ON Zegarek_A_20.ksztalt_koperty=ksztaltkoperty.id LEFT JOIN mechanizm ON Zegarek_A_20.mechanizm=mechanizm.id LEFT JOIN materialkoperty ON Zegarek_A_20.material_koperty=materialkoperty.id LEFT JOIN rodzajszkla ON Zegarek_A_20.rodzaj_szkla=rodzajszkla.id LEFT JOIN gwarancja ON Zegarek_A_20.gwarancja=gwarancja.id LEFT JOIN cechydodatkowe ON Zegarek_A_20.cechy_dodatkowe=cechydodatkowe.id LEFT JOIN funkcje ON Zegarek_A_20.funkcje=funkcje.id LEFT JOIN styl ON Zegarek_A_20.styl=styl.id LEFT JOIN popularne ON Zegarek_A_20.popularne=popularne.id LEFT JOIN krajproducenta ON Zegarek_A_20.kraj_producenta=krajproducenta.id LEFT JOIN wzor ON Zegarek_A_20.wzor=wzor.id", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -24,27 +24,10 @@ export const MySQL1_2_1 = async () => {
     });
 }
 
-export const MySQL2_1_1 = async () => {
+export const MySQLA_40_1 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT id from Wzor WHERE text LIKE 'logo'", (err, results) => {
-            if(err) {
-                return reject(err);
-            }
-            con.query("SELECT id FROM Zegarek WHERE wzor LIKE " + results[0].id, (err, results2) => {
-                if(err) {
-                    return reject(err);
-                }
-                resolve(200);
-            });
-        });
-    });
-}
-
-export const MySQL2_2_1 = async () => {
-    return new Promise((resolve,reject) => {
-
-        con.query("SELECT Zegarek.id AS id,Wzor.text AS wzor FROM Zegarek INNER JOIN Wzor ON Zegarek.wzor=Wzor.id WHERE Wzor.text LIKE 'logo'", (err, results) => {
+        con.query("SELECT DISTINCT * FROM Zegarek_A_40 LEFT JOIN producent ON Zegarek_A_40.producent=producent.id LEFT JOIN typ ON Zegarek_A_40.typ=typ.id LEFT JOIN rodzaj ON Zegarek_A_40.rodzaj=rodzaj.id LEFT JOIN wodoszczelnosc ON Zegarek_A_40.wodoszczelnosc=wodoszczelnosc.id LEFT JOIN kolor ON Zegarek_A_40.kolor=kolor.id LEFT JOIN rodzajpaska ON Zegarek_A_40.rodzaj_paska=rodzajpaska.id LEFT JOIN ksztaltkoperty ON Zegarek_A_40.ksztalt_koperty=ksztaltkoperty.id LEFT JOIN mechanizm ON Zegarek_A_40.mechanizm=mechanizm.id LEFT JOIN materialkoperty ON Zegarek_A_40.material_koperty=materialkoperty.id LEFT JOIN rodzajszkla ON Zegarek_A_40.rodzaj_szkla=rodzajszkla.id LEFT JOIN gwarancja ON Zegarek_A_40.gwarancja=gwarancja.id LEFT JOIN cechydodatkowe ON Zegarek_A_40.cechy_dodatkowe=cechydodatkowe.id LEFT JOIN funkcje ON Zegarek_A_40.funkcje=funkcje.id LEFT JOIN styl ON Zegarek_A_40.styl=styl.id LEFT JOIN popularne ON Zegarek_A_40.popularne=popularne.id LEFT JOIN krajproducenta ON Zegarek_A_40.kraj_producenta=krajproducenta.id LEFT JOIN wzor ON Zegarek_A_40.wzor=wzor.id LEFT JOIN producent2 ON Zegarek_A_40.producent2=producent2.id LEFT JOIN typ2 ON Zegarek_A_40.typ2=typ2.id LEFT JOIN rodzaj2 ON Zegarek_A_40.rodzaj2=rodzaj2.id LEFT JOIN wodoszczelnosc2 ON Zegarek_A_40.wodoszczelnosc2=wodoszczelnosc2.id LEFT JOIN kolor2 ON Zegarek_A_40.kolor2=kolor2.id LEFT JOIN rodzajpaska2 ON Zegarek_A_40.rodzaj_paska2=rodzajpaska2.id LEFT JOIN ksztaltkoperty2 ON Zegarek_A_40.ksztalt_koperty2=ksztaltkoperty2.id LEFT JOIN mechanizm2 ON Zegarek_A_40.mechanizm2=mechanizm2.id LEFT JOIN materialkoperty2 ON Zegarek_A_40.material_koperty2=materialkoperty2.id LEFT JOIN rodzajszkla2 ON Zegarek_A_40.rodzaj_szkla2=rodzajszkla2.id LEFT JOIN gwarancja2 ON Zegarek_A_40.gwarancja2=gwarancja2.id LEFT JOIN cechydodatkowe2 ON Zegarek_A_40.cechy_dodatkowe2=cechydodatkowe2.id LEFT JOIN funkcje2 ON Zegarek_A_40.funkcje2=funkcje2.id LEFT JOIN styl2 ON Zegarek_A_40.styl2=styl2.id LEFT JOIN popularne2 ON Zegarek_A_40.popularne2=popularne2.id LEFT JOIN krajproducenta2 ON Zegarek_A_40.kraj_producenta2=krajproducenta2.id LEFT JOIN wzor2 ON Zegarek_A_40.wzor2=wzor2.id", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -53,10 +36,10 @@ export const MySQL2_2_1 = async () => {
     });
 }
 
-export const MySQL2_3_1 = async () => {
+export const MySQLA_20_2 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT * FROM data_faker WHERE wzor LIKE 'logo'", (err, results) => {
+        con.query("SELECT DISTINCT * FROM Zegarek_A_20 INNER JOIN kolor ON Zegarek_A_20.kolor=kolor.id AND kolor.text LIKE 'cz%'", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -65,10 +48,10 @@ export const MySQL2_3_1 = async () => {
     });
 }
 
-export const MySQL3_1_1 = async () => {
+export const MySQLA_20_3 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT text FROM Wzor", (err, results) => {
+        con.query("SELECT DISTINCT * FROM Zegarek_A_20 INNER JOIN kolor ON Zegarek_A_20.kolor=kolor.id ORDER BY kolor.text ASC", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -77,10 +60,10 @@ export const MySQL3_1_1 = async () => {
     });
 }
 
-export const MySQL3_2_1 = async () => {
+export const MySQLA_20_4 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT DISTINCT wzor FROM data_faker", (err, results) => {
+        con.query("SELECT text FROM wzor", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -89,10 +72,10 @@ export const MySQL3_2_1 = async () => {
     });
 }
 
-export const MySQL4_1_1 = async () => {
+export const MySQLA_20_5 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT DISTINCT Zegarek.id AS id, Wzor.text AS wzor, Kolor.text AS kolor FROM Zegarek INNER JOIN Wzor ON Zegarek.wzor=Wzor.id AND Wzor.text LIKE 'logo' INNER JOIN Kolor ON Zegarek.kolor=Kolor.id AND Kolor.text LIKE 'czarne' OR 'czarny'", (err, results) => {
+        con.query("SELECT Zegarek_A_20.id AS id, wzor.text AS wzor, kolor.text AS kolor FROM Zegarek_A_20 INNER JOIN wzor ON Zegarek_A_20.wzor=wzor.id AND wzor.text LIKE 'logo' INNER JOIN kolor ON Zegarek_A_20.kolor=kolor.id AND kolor.text NOT LIKE 'czarne' OR 'czarny'", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -101,10 +84,10 @@ export const MySQL4_1_1 = async () => {
     });
 }
 
-export const MySQL4_2_1 = async () => {
+export const MySQLDN_1_1 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT * from data_faker WHERE wzor LIKE 'logo' AND (kolor LIKE 'czarny' OR kolor LIKE 'czarne')", (err, results) => {
+        con.query("SELECT * FROM Zegarek_DN_1", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -113,10 +96,10 @@ export const MySQL4_2_1 = async () => {
     });
 }
 
-export const MySQL5_1_1 = async () => {
+export const MySQLDN_10_1 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT DISTINCT Zegarek.id AS id, Wzor.text AS wzor, Kolor.text AS kolor FROM Zegarek INNER JOIN Wzor ON Zegarek.wzor=Wzor.id AND Wzor.text LIKE 'logo' INNER JOIN Kolor ON Zegarek.kolor=Kolor.id AND Kolor.text NOT LIKE 'czarne' OR 'czarny'", (err, results) => {
+        con.query("SELECT * FROM Zegarek_DN_10", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -125,10 +108,10 @@ export const MySQL5_1_1 = async () => {
     });
 }
 
-export const MySQL5_2_1 = async () => {
+export const MySQLDN_100_1 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT * from data_faker WHERE wzor LIKE 'logo' AND (kolor NOT LIKE 'czarny' AND kolor NOT LIKE 'czarne')", (err, results) => {
+        con.query("SELECT * FROM Zegarek_DN_100", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -137,10 +120,10 @@ export const MySQL5_2_1 = async () => {
     });
 }
 
-export const MySQL6_1_1 = async () => {
+export const MySQLDN_100_2 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT DISTINCT * from Zegarek INNER JOIN Kolor ON Zegarek.kolor=Kolor.id ORDER BY Kolor.text ASC", (err, results) => {
+        con.query("SELECT * FROM Zegarek_DN_100 WHERE kolor LIKE 'cz%'", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -149,10 +132,10 @@ export const MySQL6_1_1 = async () => {
     });
 }
 
-export const MySQL6_2_1 = async () => {
+export const MySQLDN_100_3 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT * from data_faker ORDER BY kolor ASC", (err, results) => {
+        con.query("SELECT * FROM Zegarek_DN_100 ORDER BY kolor ASC", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -161,10 +144,10 @@ export const MySQL6_2_1 = async () => {
     });
 }
 
-export const MySQL7_1_1 = async () => {
+export const MySQLDN_100_4 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT DISTINCT * FROM Zegarek INNER JOIN Kolor ON Zegarek.kolor=Kolor.id AND Kolor.text LIKE 'cz%'", (err, results) => {
+        con.query("SELECT DISTINCT wzor FROM Zegarek_DN_100", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -173,10 +156,10 @@ export const MySQL7_1_1 = async () => {
     });
 }
 
-export const MySQL7_2_1 = async () => {
+export const MySQLDN_100_5 = async () => {
     return new Promise((resolve,reject) => {
 
-        con.query("SELECT * FROM data_faker WHERE kolor LIKE 'cz%'", (err, results) => {
+        con.query("SELECT * FROM Zegarek_DN_100 WHERE wzor LIKE 'logo' AND (kolor NOT LIKE 'czarny' AND kolor NOT LIKE 'czarne')", (err, results) => {
             if(err) {
                 return reject(err);
             }
@@ -186,20 +169,19 @@ export const MySQL7_2_1 = async () => {
 }
 
 export default {
-    MySQL1_1_1,
-    MySQL1_2_1,
-    MySQL2_1_1,
-    MySQL2_2_1,
-    MySQL2_3_1,
-    MySQL3_1_1,
-    MySQL3_2_1,
-    MySQL4_1_1,
-    MySQL4_2_1,
-    MySQL5_1_1,
-    MySQL5_2_1,
-    MySQL6_1_1,
-    MySQL6_2_1,
-    MySQL7_1_1,
-    MySQL7_2_1
+    MySQLA_10_1,
+    MySQLA_20_1,
+    MySQLA_40_1,
+    MySQLA_20_2,
+    MySQLA_20_3,
+    MySQLA_20_4,
+    MySQLA_20_5,
+    MySQLDN_1_1,
+    MySQLDN_10_1,
+    MySQLDN_100_1,
+    MySQLDN_100_2,
+    MySQLDN_100_3,
+    MySQLDN_100_4,
+    MySQLDN_100_5
 
 }

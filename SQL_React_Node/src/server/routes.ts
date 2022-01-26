@@ -4,121 +4,113 @@ import DB from './db'
 
 const router = express.Router();
 
-router.get('/MySQL/1_1_1', async (req, res) => {
+router.get('/MySQL/A_10_1', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL1_1_1();
+        let data = await DB.Data.MySQLA_10_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/1_2_1', async (req, res) => {
+router.get('/MySQL/A_20_1', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL1_2_1();
+        let data = await DB.Data.MySQLA_20_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/2_1_1', async (req, res) => {
+router.get('/MySQL/A_40_1', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL2_1_1();
+        let data = await DB.Data.MySQLA_40_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/2_2_1', async (req, res) => {
+router.get('/MySQL/A_20_2', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL2_2_1();
+        let data = await DB.Data.MySQLA_20_2();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/2_3_1', async (req, res) => {
+router.get('/MySQL/A_20_3', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL2_3_1();
+        let data = await DB.Data.MySQLA_20_3();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/3_1_1', async (req, res) => {
+router.get('/MySQL/A_20_4', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL3_1_1();
+        let data = await DB.Data.MySQLA_20_4();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/3_2_1', async (req, res) => {
+router.get('/MySQL/A_20_5', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL3_2_1();
+        let data = await DB.Data.MySQLA_20_5();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/4_1_1', async (req, res) => {
+router.get('/MySQL/DN_1_1', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL4_1_1();
+        let data = await DB.Data.MySQLDN_1_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/4_2_1', async (req, res) => {
+router.get('/MySQL/DN_10_1', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL4_2_1();
+        let data = await DB.Data.MySQLDN_10_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/5_1_1', async (req, res) => {
+router.get('/MySQL/DN_100_1', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL5_1_1();
+        let data = await DB.Data.MySQLDN_100_1();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/5_2_1', async (req, res) => {
+router.get('/MySQL/DN_100_2', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL5_2_1();
+        let data = await DB.Data.MySQLDN_100_2();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/6_1_1', async (req, res) => {
+router.get('/MySQL/DN_100_3', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL6_1_1();
+        let data = await DB.Data.MySQLDN_100_3();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/6_2_1', async (req, res) => {
+router.get('/MySQL/DN_100_4', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL6_2_1();
+        let data = await DB.Data.MySQLDN_100_4();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
     }
 });
-router.get('/MySQL/7_1_1', async (req, res) => {
+router.get('/MySQL/DN_100_5', async (req, res) => {
     try {
-        let data = await DB.Data.MySQL7_1_1();
-        res.json(data)
-    } catch(e) {
-        res.sendStatus(500);
-    }
-});
-router.get('/MySQL/7_2_1', async (req, res) => {
-    try {
-        let data = await DB.Data.MySQL7_2_1();
+        let data = await DB.Data.MySQLDN_100_5();
         res.json(data)
     } catch(e) {
         res.sendStatus(500);
