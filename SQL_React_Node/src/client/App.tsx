@@ -166,7 +166,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGetDN_100_1/>
+					<OrmGetDN_1_1/>
 				</div>
 				{/*------------------DN_10_1------------------------------*/}
 				<hr className="mt-4"/>
@@ -203,7 +203,7 @@ const App = (props: AppProps) => {
 
 				<div className='col-sm-4 text-center card shadow mt-1 mb-1 pt-2 pb-2'>
 					<p>SQLite + Django ORM</p>
-					<OrmGetDN_1_1/>
+					<OrmGetDN_100_1/>
 				</div>
 				{/*-------------------A_20_2------------------------------*/}
 				<hr className="mt-4"/>

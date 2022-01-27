@@ -709,17 +709,7 @@ app.get('/mongo/A_20_4', function (req, res:any) {
     MongoClient.connect(uri, function (err, client) {
         if (err) throw err
         var db = client.db('arc')
-        db.collection('Zegarek_A_20').aggregate([
-            {$lookup:
-                    {
-                        from: 'Wzor',
-                        localField: 'wzor',
-                        foreignField: 'id',
-                        as:'wzor'
-                    }
-            },
-            {$group : {_id : "$wzor"}},
-        ]).toArray(function (err, result:any) {
+        db.collection('wzor').find().toArray(function (err, result:any) {
             if (err) throw err
             res.sendStatus(200)
         })
